@@ -12,6 +12,20 @@
         Ayushi Sensharma | Economics & Data Analytics
     </title>
 
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Prata&display=swap"
+          rel="stylesheet">
+
+    <!-- Main stylesheet -->
+
     <link rel="stylesheet"
           href="style.css">
 
@@ -21,69 +35,77 @@
 <body>
 
 
-    <!-- =========================
+    <!-- =====================================
          NAVIGATION
-    ========================== -->
+    ====================================== -->
 
     <nav class="navbar">
 
-        <a href="index.html"
-           class="logo">
 
-            Ayushi<span>.</span>
+        <a href="index.html"
+           class="nav-logo">
+
+            Ayushi.
 
         </a>
 
 
         <div class="nav-links">
 
-            <a href="index.html">
+            <a href="index.html"
+               class="active">
+
                 Home
+
             </a>
+
 
             <a href="about.html">
+
                 About
+
             </a>
 
-            <a href="education.html">
-                Education
-            </a>
 
-            <a href="projects.html">
-                Projects
-            </a>
+            <a href="work.html">
 
-            <a href="research.html">
-                Research
-            </a>
+                Work
 
-            <a href="contact.html">
-                Contact
             </a>
 
         </div>
+
+
+        <a href="contact.html"
+           class="nav-contact">
+
+            Let's connect →
+
+        </a>
+
 
     </nav>
 
 
 
-    <!-- =========================
+    <!-- =====================================
          HERO SECTION
-    ========================== -->
+    ====================================== -->
 
     <main>
+
 
         <section class="hero">
 
 
             <!-- LEFT SIDE -->
 
-            <div class="hero-text">
+            <div class="hero-content">
 
 
                 <p class="eyebrow">
 
-                    ECONOMICS · DATA
+                    ECONOMICS · DATA ANALYTICS
 
                 </p>
 
@@ -91,23 +113,42 @@
 
                 <h1>
 
-                    Economics,<br>
+                    <span class="name-line">
+                        Ayushi
+                    </span>
 
-                    <span>
-                        interpreted through data.
+                    <span class="surname-line">
+                        Sensharma
                     </span>
 
                 </h1>
 
 
 
+                <div class="hero-subtitle">
+
+                    <span>
+                        MSc Economics (Data Analytics)
+                    </span>
+
+                    <span class="separator">
+                        /
+                    </span>
+
+                    <span>
+                        Symbiosis School of Economics
+                    </span>
+
+                </div>
+
+
+
                 <p class="hero-description">
 
-                    I am Ayushi Sensharma, an MSc Economics
-                    (Data Analytics) student at Symbiosis School
-                    of Economics, interested in using data,
-                    econometrics and visualization to understand
-                    real-world economic questions.
+                    Exploring economic questions through
+                    data, econometrics and visualization —
+                    with a focus on turning complex
+                    information into meaningful insights.
 
                 </p>
 
@@ -115,23 +156,26 @@
 
                 <!-- BUTTONS -->
 
-                <div class="hero-buttons">
+                <div class="hero-actions">
 
 
-                    <a href="projects.html"
+                    <a href="work.html"
                        class="button primary">
 
-                        Explore My Work →
+                        Explore my work
+
+                        <span>↗</span>
 
                     </a>
 
 
-
                     <a href="resume/Ayushi_Sensharma_Resume.pdf"
-                       class="button secondary"
-                       target="_blank">
+                       target="_blank"
+                       class="button secondary">
 
-                        View Resume ↗
+                        View CV
+
+                        <span>↗</span>
 
                     </a>
 
@@ -140,50 +184,37 @@
 
 
 
-                <!-- SMALL DETAILS -->
+                <!-- QUICK LINKS -->
 
-                <div class="hero-meta">
-
-
-                    <div>
-
-                        <strong>
-                            01
-                        </strong>
-
-                        <span>
-                            Economics
-                        </span>
-
-                    </div>
+                <div class="quick-links">
 
 
+                    <a href="https://github.com/ayushisensharma"
+                       target="_blank">
 
-                    <div>
+                        GitHub ↗
 
-                        <strong>
-                            02
-                        </strong>
-
-                        <span>
-                            Analytics
-                        </span>
-
-                    </div>
+                    </a>
 
 
+                    <span>·</span>
 
-                    <div>
 
-                        <strong>
-                            03
-                        </strong>
+                    <a href="mailto:ayushi.sensharma.2025@sse.ac.in">
 
-                        <span>
-                            Visualization
-                        </span>
+                        Email ↗
 
-                    </div>
+                    </a>
+
+
+                    <span>·</span>
+
+
+                    <a href="contact.html">
+
+                        Contact ↗
+
+                    </a>
 
 
                 </div>
@@ -193,344 +224,263 @@
 
 
 
-            <!-- =========================
-                 RIGHT SIDE
-                 ANALYTICS DASHBOARD
-            ========================== -->
+            <!-- =====================================
+                 PHOTO / VISUAL SIDE
+            ====================================== -->
 
-            <div class="analytics-visual">
-
-
-                <!-- Dashboard Header -->
-
-                <div class="visual-header">
+            <div class="hero-visual">
 
 
-                    <div class="window-dots">
+                <!-- Decorative background -->
 
-                        <span></span>
-                        <span></span>
-                        <span></span>
-
-                    </div>
+                <div class="visual-background"></div>
 
 
-                    <p>
-                        economic_analysis.exe
-                    </p>
+                <!-- Decorative grid -->
+
+                <div class="visual-grid"></div>
+
+
+
+                <!-- PHOTO -->
+
+                <div class="photo-frame">
+
+
+                    <img src="images/ayushi.jpg"
+                         alt="Ayushi Sensharma">
 
 
                 </div>
 
 
 
-                <!-- Dashboard Content -->
+                <!-- Small floating data element -->
 
-                <div class="chart-area">
+                <div class="data-note note-one">
 
 
-                    <div class="chart-title">
+                    <span class="note-number">
 
+                        01
 
-                        <div>
-
-                            <span>
-                                DATA INSIGHT
-                            </span>
-
-                            <strong>
-                                Economic Trends
-                            </strong>
-
-                        </div>
-
-
-                        <div class="chart-status">
-
-                            ● LIVE ANALYSIS
-
-                        </div>
-
-
-                    </div>
-
-
-
-                    <!-- GRAPH -->
-
-                    <div class="graph-container">
-
-
-                        <div class="y-axis">
-
-                            <span>100</span>
-                            <span>75</span>
-                            <span>50</span>
-                            <span>25</span>
-                            <span>0</span>
-
-                        </div>
-
-
-
-                        <svg class="line-chart"
-                             viewBox="0 0 500 220"
-                             preserveAspectRatio="none">
-
-
-                            <!-- Grid -->
-
-                            <line
-                                x1="0"
-                                y1="20"
-                                x2="500"
-                                y2="20"
-                                class="grid-line"/>
-
-                            <line
-                                x1="0"
-                                y1="65"
-                                x2="500"
-                                y2="65"
-                                class="grid-line"/>
-
-                            <line
-                                x1="0"
-                                y1="110"
-                                x2="500"
-                                y2="110"
-                                class="grid-line"/>
-
-                            <line
-                                x1="0"
-                                y1="155"
-                                x2="500"
-                                y2="155"
-                                class="grid-line"/>
-
-                            <line
-                                x1="0"
-                                y1="200"
-                                x2="500"
-                                y2="200"
-                                class="grid-line"/>
-
-
-
-                            <!-- Area -->
-
-                            <path
-                                class="chart-area-fill"
-                                d="
-                                M0 170
-
-                                C50 155,
-                                70 120,
-                                120 140
-
-                                S175 165,
-                                215 110
-
-                                S275 80,
-                                315 105
-
-                                S360 125,
-                                400 65
-
-                                S450 70,
-                                500 25
-
-                                L500 220
-                                L0 220
-                                Z
-                                "/>
-
-
-
-                            <!-- Main Line -->
-
-                            <path
-                                class="chart-line"
-                                d="
-                                M0 170
-
-                                C50 155,
-                                70 120,
-                                120 140
-
-                                S175 165,
-                                215 110
-
-                                S275 80,
-                                315 105
-
-                                S360 125,
-                                400 65
-
-                                S450 70,
-                                500 25
-                                "/>
-
-
-
-                            <!-- Data Points -->
-
-                            <circle
-                                cx="120"
-                                cy="140"
-                                r="5"/>
-
-
-                            <circle
-                                cx="215"
-                                cy="110"
-                                r="5"/>
-
-
-                            <circle
-                                cx="315"
-                                cy="105"
-                                r="5"/>
-
-
-                            <circle
-                                cx="400"
-                                cy="65"
-                                r="5"/>
-
-
-                            <circle
-                                cx="500"
-                                cy="25"
-                                r="6"/>
-
-
-                        </svg>
-
-                    </div>
-
-
-
-                    <!-- X Axis -->
-
-                    <div class="chart-labels">
-
-                        <span>
-                            2019
-                        </span>
-
-                        <span>
-                            2020
-                        </span>
-
-                        <span>
-                            2021
-                        </span>
-
-                        <span>
-                            2022
-                        </span>
-
-                        <span>
-                            2023
-                        </span>
-
-                        <span>
-                            2024
-                        </span>
-
-                    </div>
-
-
-
-                    <!-- =========================
-                         LOWER DASHBOARD CARDS
-                    ========================== -->
-
-                    <div class="mini-stats">
-
-
-                        <div class="mini-card">
-
-
-                            <span>
-                                TOOLS
-                            </span>
-
-
-                            <div class="tool-tags">
-
-
-                                <b class="python-tag">
-                                    Python
-                                </b>
-
-
-                                <b class="r-tag">
-                                    R
-                                </b>
-
-
-                                <b class="tableau-tag">
-                                    Tableau
-                                </b>
-
-
-                            </div>
-
-
-                        </div>
-
-
-
-                        <div class="mini-card">
-
-
-                            <span>
-                                APPROACH
-                            </span>
-
-
-                            <strong>
-                                Data → Insight
-                            </strong>
-
-
-                            <small>
-                                Analysis · Visualization
-                            </small>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- FLOATING CARD -->
-
-                <div class="floating-data">
-
-
-                    <div class="pulse"></div>
+                    </span>
 
 
                     <div>
 
                         <small>
-                            ANALYSIS STATUS
+                            FIELD
                         </small>
 
                         <strong>
-                            Finding insights...
+                            Economics
                         </strong>
 
                     </div>
 
+
+                </div>
+
+
+
+                <div class="data-note note-two">
+
+
+                    <span class="note-number">
+
+                        02
+
+                    </span>
+
+
+                    <div>
+
+                        <small>
+                            APPROACH
+                        </small>
+
+                        <strong>
+                            Data → Insight
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Animated line -->
+
+                <div class="orbit-line"></div>
+
+
+                <!-- Floating dot -->
+
+                <div class="floating-dot dot-one"></div>
+
+                <div class="floating-dot dot-two"></div>
+
+                <div class="floating-dot dot-three"></div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             INTRODUCTION STRIP
+        ====================================== -->
+
+        <section class="intro-strip">
+
+
+            <div class="intro-label">
+
+                <span>
+                    01
+                </span>
+
+                <p>
+                    CURRENTLY
+                </p>
+
+            </div>
+
+
+            <div class="intro-main">
+
+                <h2>
+
+                    Building a career at the
+                    intersection of
+                    <em>economics</em> and
+                    <em>data.</em>
+
+                </h2>
+
+            </div>
+
+
+            <div class="intro-side">
+
+                <p>
+
+                    My work combines quantitative
+                    economics with practical data
+                    analysis, programming and
+                    visualization.
+
+                </p>
+
+
+                <a href="about.html">
+
+                    More about me →
+
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             WHAT I WORK WITH
+        ====================================== -->
+
+        <section class="skills-section">
+
+
+            <div class="section-heading">
+
+
+                <p class="section-label">
+
+                    02 · WHAT I WORK WITH
+
+                </p>
+
+
+                <h2>
+
+                    Tools & interests
+
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="skills-grid">
+
+
+                <div class="skill-item">
+
+                    <span>01</span>
+
+                    <h3>
+                        Economics
+                    </h3>
+
+                    <p>
+                        Economic analysis · Statistics · Econometrics
+                    </p>
+
+                </div>
+
+
+
+                <div class="skill-item">
+
+                    <span>02</span>
+
+                    <h3>
+                        Programming
+                    </h3>
+
+                    <p>
+                        Python · R · SQL
+                    </p>
+
+                </div>
+
+
+
+                <div class="skill-item">
+
+                    <span>03</span>
+
+                    <h3>
+                        Visualization
+                    </h3>
+
+                    <p>
+                        Tableau · Excel · Data storytelling
+                    </p>
+
+                </div>
+
+
+
+                <div class="skill-item">
+
+                    <span>04</span>
+
+                    <h3>
+                        Quantitative Work
+                    </h3>
+
+                    <p>
+                        Data analysis · Modelling · Research
+                    </p>
 
                 </div>
 
@@ -542,50 +492,183 @@
 
 
 
-        <!-- =========================
-             ABOUT INTRO
-        ========================== -->
+        <!-- =====================================
+             SELECTED WORK PREVIEW
+        ====================================== -->
 
-        <section class="intro-section">
-
-
-            <div>
+        <section class="work-preview">
 
 
-                <p class="section-label">
-
-                    A LITTLE ABOUT ME
-
-                </p>
+            <div class="work-heading">
 
 
-                <h2>
+                <div>
 
-                    Turning economic questions
-                    into <em>data-driven insights.</em>
+                    <p class="section-label">
 
-                </h2>
+                        03 · SELECTED WORK
+
+                    </p>
+
+
+                    <h2>
+
+                        From questions<br>
+                        to analysis.
+
+                    </h2>
+
+                </div>
+
+
+                <a href="work.html"
+                   class="view-all">
+
+                    View all work →
+
+                </a>
 
 
             </div>
 
 
 
-            <div class="intro-copy">
+            <div class="work-preview-grid">
 
 
-                <p>
+                <!-- PROJECT 1 -->
 
-                    My academic background combines Economics
-                    and Statistics with practical experience in
-                    data analysis, programming and visualization.
-
-                </p>
+                <a href="work.html"
+                   class="preview-card card-lavender">
 
 
-                <a href="about.html">
+                    <div class="card-top">
 
-                    More about me →
+                        <span>
+                            01
+                        </span>
+
+                        <span>
+                            R · ECONOMETRICS
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+
+                        Fiscal Multiplier
+                        in India
+
+                    </h3>
+
+
+                    <p>
+
+                        Empirical analysis of fiscal
+                        policy using quantitative methods.
+
+                    </p>
+
+
+                    <div class="card-arrow">
+
+                        ↗
+
+                    </div>
+
+
+                </a>
+
+
+
+                <!-- PROJECT 2 -->
+
+                <a href="work.html"
+                   class="preview-card card-blue">
+
+
+                    <div class="card-top">
+
+                        <span>
+                            02
+                        </span>
+
+                        <span>
+                            TABLEAU
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+
+                        Digital Payments
+                        & COVID-19
+
+                    </h3>
+
+
+                    <p>
+
+                        Interactive visualization exploring
+                        India's digital payment landscape.
+
+                    </p>
+
+
+                    <div class="card-arrow">
+
+                        ↗
+
+                    </div>
+
+
+                </a>
+
+
+
+                <!-- PROJECT 3 -->
+
+                <a href="work.html"
+                   class="preview-card card-pink">
+
+
+                    <div class="card-top">
+
+                        <span>
+                            03
+                        </span>
+
+                        <span>
+                            PYTHON
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+
+                        Price Rigidity
+                        in India
+
+                    </h3>
+
+
+                    <p>
+
+                        Visual analysis comparing
+                        pre- and post-COVID periods.
+
+                    </p>
+
+
+                    <div class="card-arrow">
+
+                        ↗
+
+                    </div>
+
 
                 </a>
 
@@ -597,137 +680,72 @@
 
 
 
-        <!-- =========================
-             AREAS OF INTEREST
-        ========================== -->
+        <!-- =====================================
+             CONTACT CTA
+        ====================================== -->
 
-        <section class="interest-section">
-
-
-            <div class="interest-card">
+        <section class="contact-section">
 
 
-                <span>
-                    01
-                </span>
+            <div>
+
+                <p class="section-label">
+
+                    04 · GET IN TOUCH
+
+                </p>
 
 
-                <h3>
-                    Economics
-                </h3>
+                <h2>
+
+                    Let's connect.
+
+                </h2>
 
 
                 <p>
-                    Economic analysis, statistics
-                    and econometrics.
-                </p>
 
+                    Whether you'd like to discuss
+                    data, economics, research or
+                    potential opportunities.
+
+                </p>
 
             </div>
 
 
-
-            <div class="interest-card">
-
-
-                <span>
-                    02
-                </span>
+            <div class="contact-links">
 
 
-                <h3>
-                    Data Analytics
-                </h3>
+                <a href="mailto:ayushi.sensharma.2025@sse.ac.in">
+
+                    Email
+
+                    <span>↗</span>
+
+                </a>
 
 
-                <p>
-                    Python, R, SQL and Excel
-                    for working with data.
-                </p>
+                <a href="https://github.com/ayushisensharma"
+                   target="_blank">
+
+                    GitHub
+
+                    <span>↗</span>
+
+                </a>
 
 
-            </div>
+                <a href="contact.html">
 
+                    More contact details
 
+                    <span>↗</span>
 
-            <div class="interest-card">
-
-
-                <span>
-                    03
-                </span>
-
-
-                <h3>
-                    Visualization
-                </h3>
-
-
-                <p>
-                    Turning complex information
-                    into clear visual stories.
-                </p>
+                </a>
 
 
             </div>
-
-
-
-            <div class="interest-card">
-
-
-                <span>
-                    04
-                </span>
-
-
-                <h3>
-                    Research
-                </h3>
-
-
-                <p>
-                    Applying quantitative methods
-                    to real-world questions.
-                </p>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =========================
-             CALL TO ACTION
-        ========================== -->
-
-        <section class="cta">
-
-
-            <p class="section-label">
-
-                EXPLORE MY WORK
-
-            </p>
-
-
-            <h2>
-
-                Data tells a story.<br>
-
-                Let's find it.
-
-            </h2>
-
-
-            <a href="projects.html"
-               class="button primary">
-
-                View Projects →
-
-            </a>
 
 
         </section>
@@ -737,25 +755,35 @@
 
 
 
-    <!-- =========================
+    <!-- =====================================
          FOOTER
-    ========================== -->
+    ====================================== -->
 
     <footer>
 
 
         <p>
+
             © 2026 Ayushi Sensharma
+
         </p>
 
 
         <p>
-            Economics × Data Analytics
+
+            Economics · Data Analytics
+
         </p>
 
 
-    </footer>
+        <a href="#">
 
+            Back to top ↑
+
+        </a>
+
+
+    </footer>
 
 
 </body>
