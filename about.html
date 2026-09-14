@@ -1,280 +1,990 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>About | Ayushi Sensharma</title>
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Prata&display=swap"
+        rel="stylesheet"
+    >
 
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css?v=3">
-    <link rel="stylesheet" href="inner-pages.css?v=1">
+
+    <!-- Inner page stylesheet -->
+    <link rel="stylesheet" href="inner-pages.css?v=3">
+
+
+    <!-- =====================================================
+         ABOUT PAGE STYLING
+         ===================================================== -->
+
+    <style>
+
+        /* -------------------------------------------------
+           BASIC
+           ------------------------------------------------- */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+            background: #FBF9F5;
+            color: #29272B;
+
+            font-family: "DM Sans", sans-serif;
+        }
+
+
+        /* -------------------------------------------------
+           HEADER
+           ------------------------------------------------- */
+
+        .about-navbar {
+            width: 100%;
+
+            background: #FBF9F5;
+
+            border-bottom: 1px solid #E5E0DC;
+
+            position: relative;
+            z-index: 100;
+        }
+
+        .about-nav-inner {
+            width: min(1180px, calc(100% - 80px));
+
+            min-height: 88px;
+
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .about-logo {
+            font-family: "Prata", serif;
+
+            font-size: 25px;
+            font-weight: 400;
+
+            color: #29272B;
+
+            text-decoration: none;
+
+            letter-spacing: -0.5px;
+        }
+
+        .about-nav-links {
+            display: flex;
+            align-items: center;
+
+            gap: 38px;
+        }
+
+        .about-nav-links a {
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 14px;
+            font-weight: 500;
+
+            color: #29272B;
+
+            text-decoration: none;
+
+            transition: color 0.25s ease,
+                        transform 0.25s ease;
+        }
+
+        .about-nav-links a:hover {
+            color: #806A99;
+            transform: translateY(-1px);
+        }
+
+
+        /* -------------------------------------------------
+           PAGE INTRO
+           ------------------------------------------------- */
+
+        .about-hero {
+            width: min(1180px, calc(100% - 80px));
+
+            margin: 0 auto;
+
+            padding: 105px 0 90px;
+        }
+
+        .about-label {
+            display: inline-flex;
+            align-items: center;
+
+            padding: 10px 19px;
+
+            background: #DDD4EA;
+
+            border-radius: 999px;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: #806A99;
+        }
+
+        .about-hero h1 {
+            max-width: 850px;
+
+            margin: 30px 0 0;
+
+            font-family: "Prata", serif;
+
+            font-size: clamp(55px, 8vw, 100px);
+
+            line-height: 1.02;
+
+            font-weight: 400;
+
+            letter-spacing: -3px;
+
+            color: #29272B;
+        }
+
+        .about-hero h1 span {
+            color: #806A99;
+        }
+
+        .about-hero-description {
+            max-width: 720px;
+
+            margin: 32px 0 0;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 17px;
+
+            line-height: 1.75;
+
+            color: #716D73;
+        }
+
+
+        /* -------------------------------------------------
+           MAIN SECTIONS
+           ------------------------------------------------- */
+
+        .about-section {
+            width: min(1180px, calc(100% - 80px));
+
+            margin: 0 auto;
+
+            padding: 85px 0;
+
+            border-top: 1px solid #E5E0DC;
+        }
+
+        .section-number {
+            display: block;
+
+            margin-bottom: 14px;
+
+            font-family: "Prata", serif;
+
+            font-size: 25px;
+
+            color: #806A99;
+        }
+
+        .section-label {
+            display: inline-flex;
+
+            padding: 10px 19px;
+
+            background: #DDD4EA;
+
+            border-radius: 999px;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: #806A99;
+        }
+
+
+        /* -------------------------------------------------
+           ABOUT ME
+           ------------------------------------------------- */
+
+        .about-me-grid {
+            display: grid;
+
+            grid-template-columns: 0.75fr 1.5fr;
+
+            gap: 100px;
+
+            margin-top: 45px;
+        }
+
+        .about-me-title {
+            margin: 0;
+
+            font-family: "Prata", serif;
+
+            font-size: 48px;
+
+            line-height: 1.15;
+
+            font-weight: 400;
+
+            letter-spacing: -1px;
+
+            color: #29272B;
+        }
+
+        .about-me-text p {
+            margin: 0 0 22px;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 16px;
+
+            line-height: 1.85;
+
+            color: #716D73;
+        }
+
+        .about-me-text p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* -------------------------------------------------
+           EDUCATION
+           ------------------------------------------------- */
+
+        .education-list {
+            margin-top: 45px;
+        }
+
+        .education-item {
+            display: grid;
+
+            grid-template-columns: 180px 1fr;
+
+            gap: 50px;
+
+            padding: 35px 0;
+
+            border-top: 1px solid #E5E0DC;
+        }
+
+        .education-item:last-child {
+            border-bottom: 1px solid #E5E0DC;
+        }
+
+        .education-year {
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: #806A99;
+        }
+
+        .education-content h3 {
+            margin: 0 0 8px;
+
+            font-family: "Prata", serif;
+
+            font-size: 27px;
+
+            line-height: 1.3;
+
+            font-weight: 400;
+
+            color: #29272B;
+        }
+
+        .education-institution {
+            margin: 0 0 10px;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            color: #716D73;
+        }
+
+        .education-details {
+            margin: 0;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            color: #716D73;
+        }
+
+
+        /* -------------------------------------------------
+           WORK EXPERIENCE
+           ------------------------------------------------- */
+
+        .experience-wrapper {
+            margin-top: 45px;
+        }
+
+        .experience-card {
+            padding: 45px;
+
+            background: #F1DDE1;
+
+            border-radius: 26px;
+        }
+
+        .experience-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 30px;
+
+            margin-bottom: 30px;
+        }
+
+        .experience-card h3 {
+            margin: 0 0 8px;
+
+            font-family: "Prata", serif;
+
+            font-size: 30px;
+
+            line-height: 1.3;
+
+            font-weight: 400;
+
+            color: #29272B;
+        }
+
+        .experience-company {
+            margin: 0;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            color: #716D73;
+        }
+
+        .experience-date {
+            white-space: nowrap;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            color: #806A99;
+        }
+
+        .experience-list {
+            margin: 0;
+
+            padding-left: 20px;
+        }
+
+        .experience-list li {
+            margin-bottom: 14px;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 14px;
+
+            line-height: 1.75;
+
+            color: #716D73;
+        }
+
+        .experience-list li:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* -------------------------------------------------
+           FOOTER
+           ------------------------------------------------- */
+
+        .about-footer {
+            width: min(1180px, calc(100% - 80px));
+
+            margin: 0 auto;
+
+            padding: 45px 0;
+
+            border-top: 1px solid #E5E0DC;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .about-footer p {
+            margin: 0;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 12px;
+
+            color: #716D73;
+        }
+
+        .about-footer a {
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            color: #29272B;
+
+            text-decoration: none;
+        }
+
+        .about-footer a:hover {
+            color: #806A99;
+        }
+
+
+        /* -------------------------------------------------
+           ANIMATION
+           ------------------------------------------------- */
+
+        @keyframes aboutFadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        .about-hero,
+        .about-section {
+            animation: aboutFadeUp 0.7s ease both;
+        }
+
+
+        /* -------------------------------------------------
+           TABLET
+           ------------------------------------------------- */
+
+        @media (max-width: 900px) {
+
+            .about-nav-inner {
+                width: min(100% - 48px, 1180px);
+            }
+
+            .about-nav-links {
+                gap: 25px;
+            }
+
+            .about-hero,
+            .about-section,
+            .about-footer {
+                width: min(100% - 48px, 1180px);
+            }
+
+            .about-me-grid {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .education-item {
+                grid-template-columns: 140px 1fr;
+
+                gap: 30px;
+            }
+
+        }
+
+
+        /* -------------------------------------------------
+           MOBILE
+           ------------------------------------------------- */
+
+        @media (max-width: 650px) {
+
+            .about-nav-inner {
+                width: calc(100% - 36px);
+
+                min-height: 78px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                justify-content: center;
+
+                gap: 12px;
+            }
+
+            .about-logo {
+                font-size: 23px;
+            }
+
+            .about-nav-links {
+                width: 100%;
+
+                display: flex;
+
+                flex-wrap: wrap;
+
+                gap: 14px 20px;
+            }
+
+            .about-nav-links a {
+                font-size: 12px;
+            }
+
+
+            .about-hero {
+                width: calc(100% - 36px);
+
+                padding: 75px 0 65px;
+            }
+
+            .about-hero h1 {
+                font-size: clamp(46px, 14vw, 70px);
+
+                letter-spacing: -2px;
+            }
+
+            .about-hero-description {
+                font-size: 15px;
+            }
+
+
+            .about-section {
+                width: calc(100% - 36px);
+
+                padding: 65px 0;
+            }
+
+            .about-me-title {
+                font-size: 38px;
+            }
+
+
+            .education-item {
+                grid-template-columns: 1fr;
+
+                gap: 12px;
+
+                padding: 28px 0;
+            }
+
+            .education-content h3 {
+                font-size: 23px;
+            }
+
+
+            .experience-card {
+                padding: 30px 24px;
+
+                border-radius: 20px;
+            }
+
+            .experience-header {
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+            .experience-card h3 {
+                font-size: 24px;
+            }
+
+
+            .about-footer {
+                width: calc(100% - 36px);
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                padding: 35px 0;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<header class="site-header">
-    <div class="nav-wrap">
 
-        <a href="index.html" class="logo">Ayushi.</a>
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
 
-        <nav class="main-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="mailto:ayushi.sensharma.2025@sse.ac.in" class="nav-contact">
-                Contact →
+    <nav class="about-navbar">
+
+        <div class="about-nav-inner">
+
+            <a href="index.html" class="about-logo">
+                Ayushi.
             </a>
-        </nav>
 
-    </div>
-</header>
+            <div class="about-nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="mailto:ayushi.sensharma.2025@sse.ac.in">
+                    Contact →
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
 
 
-<main>
+    <!-- =====================================================
+         ABOUT PAGE
+         ===================================================== -->
 
-    <!-- PAGE INTRO -->
+    <main>
 
-    <section class="page-hero">
-        <div class="page-hero-inner">
 
-            <p class="eyebrow">ABOUT ME</p>
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
+        <section class="about-hero">
+
+            <div class="about-label">
+                ABOUT ME
+            </div>
 
             <h1>
-                A little more<br>
+                A little more
+                <br>
                 <span>about me.</span>
             </h1>
 
-            <p class="page-intro">
+            <p class="about-hero-description">
                 I am an MSc Economics (Data Analytics) student at
                 Symbiosis School of Economics, interested in combining
-                economic thinking with quantitative analysis, programming
-                and data visualization.
+                economic thinking with quantitative analysis,
+                programming and data visualization.
             </p>
 
-        </div>
-    </section>
+        </section>
 
 
-    <!-- ABOUT -->
+        <!-- =================================================
+             ABOUT ME
+             ================================================= -->
 
-    <section class="inner-section about-section">
+        <section class="about-section">
 
-        <div class="section-number">01</div>
+            <span class="section-number">
+                01
+            </span>
 
-        <div class="section-content">
+            <span class="section-label">
+                ABOUT ME
+            </span>
 
-            <div class="section-heading">
-                <p class="eyebrow">ABOUT ME</p>
-                <h2>Economics, data &amp; curiosity.</h2>
+
+            <div class="about-me-grid">
+
+                <h2 class="about-me-title">
+                    Economics,
+                    <br>
+                    data &amp;
+                    <br>
+                    curiosity.
+                </h2>
+
+
+                <div class="about-me-text">
+
+                    <p>
+                        I am currently pursuing an MSc in Economics
+                        (Data Analytics) at Symbiosis School of Economics,
+                        where I am developing an interest in using data
+                        and quantitative methods to understand economic
+                        questions.
+                    </p>
+
+                    <p>
+                        My academic work combines economics, statistics
+                        and econometrics with programming and data
+                        visualization. I enjoy working with real-world
+                        datasets and turning complex information into
+                        clear and meaningful insights.
+                    </p>
+
+                    <p>
+                        My projects have involved Python, R, Tableau,
+                        Orange and econometric analysis, covering topics
+                        such as digital payments, price rigidity,
+                        hotel booking cancellations and India's fiscal
+                        multiplier.
+                    </p>
+
+                </div>
+
             </div>
 
-            <div class="about-text">
-                <p>
-                    My academic interests lie at the intersection of economics
-                    and data analytics. I enjoy working with real-world
-                    datasets and using statistics, econometrics and programming
-                    to understand economic questions.
-                </p>
-
-                <p>
-                    Through academic projects and practical experience, I have
-                    worked with Python, R, SQL, Excel, Tableau and other
-                    analytical tools to clean data, identify patterns and
-                    communicate insights clearly.
-                </p>
-
-                <p>
-                    I am particularly interested in work where quantitative
-                    analysis can be used to turn complex information into
-                    meaningful and useful insights.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- EDUCATION -->
+        <!-- =================================================
+             EDUCATION
+             ================================================= -->
 
-    <section class="inner-section education-section">
+        <section class="about-section">
 
-        <div class="section-number">02</div>
+            <span class="section-number">
+                02
+            </span>
 
-        <div class="section-content">
+            <span class="section-label">
+                EDUCATION
+            </span>
 
-            <div class="section-heading">
-                <p class="eyebrow">EDUCATION</p>
-                <h2>Academic background.</h2>
-            </div>
 
-            <div class="timeline">
+            <div class="education-list">
 
-                <article class="timeline-item">
-                    <div class="timeline-year">2025 — 2027</div>
 
-                    <div class="timeline-card">
-                        <p class="card-label">CURRENT</p>
+                <!-- MSc -->
+
+                <div class="education-item">
+
+                    <div class="education-year">
+                        2025 — 2027
+                    </div>
+
+                    <div class="education-content">
 
                         <h3>
                             M.Sc. Economics (Data Analytics)
                         </h3>
 
-                        <p class="institution">
-                            Symbiosis School of Economics
-                        </p>
-
-                        <p class="institution-sub">
+                        <p class="education-institution">
+                            Symbiosis School of Economics,
                             Symbiosis International University, Pune
                         </p>
 
-                        <p class="result">
+                        <p class="education-details">
                             CGPA: 8.6 / 10
                         </p>
+
                     </div>
-                </article>
+
+                </div>
 
 
-                <article class="timeline-item">
-                    <div class="timeline-year">2022 — 2025</div>
+                <!-- BSc -->
 
-                    <div class="timeline-card">
-                        <p class="card-label">UNDERGRADUATE</p>
+                <div class="education-item">
+
+                    <div class="education-year">
+                        2022 — 2025
+                    </div>
+
+                    <div class="education-content">
 
                         <h3>
                             B.Sc. Economics, Mathematics &amp; Statistics
                         </h3>
 
-                        <p class="institution">
-                            CHRIST (Deemed to be University), Delhi NCR
+                        <p class="education-institution">
+                            CHRIST (Deemed to be University),
+                            Delhi NCR
                         </p>
 
-                        <p class="result">
-                            9.66 / 10 · First Rank in Program
+                        <p class="education-details">
+                            First Rank · CGPA: 9.66 / 10
                         </p>
 
-                        <p class="card-description">
-                            Concentration in Economics and Statistics.
-                        </p>
-                    </div>
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- WORK EXPERIENCE -->
-
-    <section class="inner-section experience-section">
-
-        <div class="section-number">03</div>
-
-        <div class="section-content">
-
-            <div class="section-heading">
-                <p class="eyebrow">WORK EXPERIENCE</p>
-                <h2>Learning through practice.</h2>
-            </div>
-
-
-            <article class="experience-card">
-
-                <div class="experience-top">
-
-                    <div>
-                        <p class="card-label">INTERNSHIP</p>
-
-                        <h3>
-                            HEAPS Health Solutions India Pvt. Ltd.
-                        </h3>
-
-                        <p class="institution">
-                            Gurugram
-                        </p>
-                    </div>
-
-                    <div class="experience-date">
-                        May — July 2024
                     </div>
 
                 </div>
 
+            </div>
 
-                <div class="experience-body">
+        </section>
 
-                    <p>
-                        Worked on data tracking, cleaning, reporting and
-                        analysis for a patient outreach campaign covering
-                        1,000+ records across four disease-based patient groups.
-                    </p>
 
-                    <ul>
+        <!-- =================================================
+             WORK EXPERIENCE
+             ================================================= -->
+
+        <section class="about-section">
+
+            <span class="section-number">
+                03
+            </span>
+
+            <span class="section-label">
+                WORK EXPERIENCE
+            </span>
+
+
+            <div class="experience-wrapper">
+
+                <div class="experience-card">
+
+
+                    <div class="experience-header">
+
+                        <div>
+
+                            <h3>
+                                HEAPS Health Solutions
+                            </h3>
+
+                            <p class="experience-company">
+                                HEAPS Health Solutions India Pvt. Ltd.
+                                · Gurugram
+                            </p>
+
+                        </div>
+
+                        <div class="experience-date">
+                            May — July 2024
+                        </div>
+
+                    </div>
+
+
+                    <ul class="experience-list">
+
                         <li>
-                            Built three interlinked Excel tracking systems
-                            covering caller performance, cohort sizing and
-                            revenue.
+                            Built three interlinked Excel tracking
+                            systems for caller performance, cohort
+                            sizing and revenue across 1,000+ records
+                            and four disease groups.
                         </li>
 
                         <li>
-                            Used Python and pandas to clean and deduplicate
-                            call logs, standardize fields and identify data
-                            quality issues.
+                            Used Python and pandas to clean and
+                            deduplicate call logs, standardize medical
+                            condition fields, flag invalid numbers
+                            and identify duplicate records.
                         </li>
 
                         <li>
-                            Created a weekly performance dashboard tracking
-                            connect rates, reachability and average call
-                            duration.
+                            Created a weekly dashboard tracking call
+                            connect rates and reachability over
+                            six weeks using KPI formulas.
                         </li>
 
                         <li>
-                            Built a cohort sizing model that updated target
-                            patient lists on a weekly basis.
+                            Built a cohort sizing model to update
+                            target patient lists on a weekly basis.
                         </li>
 
                         <li>
-                            Developed a revenue tracker connecting call
-                            outcomes with hospital visits and billing data.
+                            Developed a revenue tracker linking
+                            call outcomes with hospital visits
+                            and billing data.
                         </li>
+
                     </ul>
 
                 </div>
 
-            </article>
+            </div>
 
-        </div>
-
-    </section>
-
-</main>
+        </section>
 
 
-<footer class="site-footer">
+    </main>
 
-    <div class="footer-inner">
 
-        <div>
-            <p class="footer-name">Ayushi Sensharma</p>
-            <p class="footer-sub">
-                Economics · Statistics · Data Analytics
-            </p>
-        </div>
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
 
-        <a href="#top" class="back-top">
-            Back to top ↑
+    <footer class="about-footer">
+
+        <p>
+            © 2026 Ayushi Sensharma
+        </p>
+
+        <a href="index.html">
+            Back to home ↑
         </a>
 
-    </div>
+    </footer>
 
-</footer>
 
 </body>
+
 </html>
