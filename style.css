@@ -1,0 +1,471 @@
+/* =========================================
+   AYUSHI SENSHARMA - PORTFOLIO
+   Elegant Pastel Theme
+   ========================================= */
+
+
+/* ---------- BASIC RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #faf8f5;
+    color: #292727;
+    line-height: 1.7;
+}
+
+
+/* ---------- COLOUR VARIABLES ---------- */
+
+:root {
+    --background: #faf8f5;
+    --white: #ffffff;
+    --text: #292727;
+    --muted: #706b6b;
+
+    --lavender: #dcd4f2;
+    --pink: #f1d5dc;
+    --blue: #d5e5ef;
+    --sage: #d9e6dc;
+
+    --dark: #363238;
+
+    --shadow: 0 12px 35px rgba(50, 45, 50, 0.08);
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+.navbar {
+    width: 100%;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(250, 248, 245, 0.92);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8d78ad;
+}
+
+
+/* ---------- HERO SECTION ---------- */
+
+.hero {
+    min-height: 88vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 9%;
+
+    overflow: hidden;
+}
+
+.hero-text {
+    max-width: 650px;
+
+    animation: fadeUp 1s ease forwards;
+}
+
+.small-heading,
+.section-label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #8d78ad;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 95px);
+    line-height: 1;
+    letter-spacing: -5px;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: #9b83b9;
+}
+
+.hero h2 {
+    font-size: 27px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.intro {
+    max-width: 570px;
+    color: var(--muted);
+    font-size: 17px;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 23px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.primary {
+    background: var(--dark);
+    color: white;
+}
+
+.primary:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.secondary {
+    background: var(--white);
+    color: var(--text);
+    border: 1px solid #ddd7d7;
+}
+
+.secondary:hover {
+    transform: translateY(-4px);
+    background: var(--lavender);
+}
+
+
+/* ---------- DECORATIVE HERO CARDS ---------- */
+
+.hero-card {
+    width: 360px;
+    height: 360px;
+
+    position: relative;
+
+    background: var(--lavender);
+
+    border-radius: 50%;
+
+    animation: float 5s ease-in-out infinite;
+}
+
+.floating-card {
+    position: absolute;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    padding: 18px 22px;
+
+    border-radius: 15px;
+
+    box-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 150px;
+}
+
+.floating-card strong {
+    font-size: 15px;
+}
+
+.floating-card span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.card-one {
+    top: 40px;
+    left: -20px;
+}
+
+.card-two {
+    top: 145px;
+    right: -45px;
+    background: var(--pink);
+}
+
+.card-three {
+    bottom: 35px;
+    left: 55px;
+    background: var(--sage);
+}
+
+
+/* ---------- INTRO SECTION ---------- */
+
+.intro-section {
+    padding: 110px 12%;
+    background: var(--white);
+}
+
+.intro-section h2 {
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.intro-section > p:last-child {
+    max-width: 650px;
+    color: var(--muted);
+}
+
+
+/* ---------- INTEREST CARDS ---------- */
+
+.interest-section {
+    padding: 90px 9%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.interest-card {
+    padding: 32px;
+
+    background: var(--white);
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+    transition: all 0.35s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-8px);
+}
+
+.interest-card:nth-child(1) {
+    background: var(--lavender);
+}
+
+.interest-card:nth-child(2) {
+    background: var(--blue);
+}
+
+.interest-card:nth-child(3) {
+    background: var(--pink);
+}
+
+.interest-card:nth-child(4) {
+    background: var(--sage);
+}
+
+.icon {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+    opacity: 0.6;
+}
+
+.interest-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.interest-card p {
+    font-size: 14px;
+    color: #625e5e;
+}
+
+
+/* ---------- CALL TO ACTION ---------- */
+
+.cta {
+    text-align: center;
+
+    padding: 120px 20px;
+
+    background: var(--lavender);
+}
+
+.cta h2 {
+    font-size: clamp(38px, 5vw, 65px);
+    margin-bottom: 30px;
+    letter-spacing: -2px;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    padding: 30px 8%;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 13px;
+
+    color: var(--muted);
+
+    background: var(--white);
+}
+
+
+/* ---------- ANIMATIONS ---------- */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ---------- MOBILE RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 70px 7%;
+        gap: 70px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-card {
+        width: 280px;
+        height: 280px;
+    }
+
+    .interest-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .hero-card {
+        width: 230px;
+        height: 230px;
+    }
+
+    .floating-card {
+        min-width: 120px;
+        padding: 12px 15px;
+    }
+
+    .interest-section {
+        grid-template-columns: 1fr;
+        padding: 60px 7%;
+    }
+
+    .intro-section {
+        padding: 80px 8%;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+}
