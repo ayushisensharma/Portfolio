@@ -1167,3 +1167,572 @@ footer a:hover {
     }
 
 }
+/* =========================================================
+   FINAL FORMATTING FIXES
+========================================================= */
+
+
+/* ---------- NAVIGATION FIX ---------- */
+
+.navbar {
+    width: 100%;
+    min-height: 82px;
+    padding: 22px 7%;
+    
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+
+    background: #FBF9F5 !important;
+    border-bottom: 1px solid #E5E0DC;
+
+    z-index: 100;
+}
+
+
+/* ---------- NAV LINKS ---------- */
+
+.nav-links {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 42px !important;
+
+    margin: 0 !important;
+}
+
+
+/* ---------- CONTACT BUTTON ---------- */
+
+.contact-nav {
+    display: inline-block !important;
+
+    padding: 10px 19px !important;
+
+    border: 1px solid #29272B !important;
+    border-radius: 30px !important;
+
+    color: #29272B !important;
+
+    font-size: 13px !important;
+}
+
+
+/* =========================================================
+   HERO FIX
+========================================================= */
+
+.hero {
+    width: 100%;
+
+    min-height: 650px;
+
+    padding: 90px 9% 100px !important;
+
+    display: grid !important;
+
+    grid-template-columns: 1fr 0.8fr !important;
+
+    gap: 80px !important;
+
+    align-items: center !important;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.hero-left {
+    width: 100%;
+    max-width: 650px;
+
+    display: block !important;
+}
+
+
+.eyebrow {
+    display: inline-block !important;
+
+    background: #DDD4EA !important;
+
+    color: #806A99 !important;
+
+    padding: 7px 14px !important;
+
+    border-radius: 30px !important;
+
+    font-size: 11px !important;
+
+    letter-spacing: 2.2px !important;
+
+    margin-bottom: 25px !important;
+}
+
+
+.hero h1 {
+    font-family: "Prata", serif !important;
+
+    font-size: clamp(70px, 8vw, 110px) !important;
+
+    font-weight: 400 !important;
+
+    line-height: 0.95 !important;
+
+    letter-spacing: -3px !important;
+
+    margin: 0 0 30px 0 !important;
+}
+
+
+.hero h1 span {
+    color: #806A99 !important;
+}
+
+
+.academic-line {
+    font-family: "DM Sans", sans-serif !important;
+
+    font-size: 16px !important;
+
+    margin-bottom: 20px !important;
+}
+
+
+.hero-description {
+    font-family: "DM Sans", sans-serif !important;
+
+    max-width: 570px;
+
+    font-size: 16px !important;
+
+    line-height: 1.8 !important;
+
+    color: #716D73 !important;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS — MORE SPACE
+========================================================= */
+
+.hero-links {
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: flex-start !important;
+
+    gap: 38px !important;
+
+    margin-top: 32px !important;
+
+    width: 100% !important;
+
+    flex-wrap: nowrap !important;
+}
+
+
+.hero-links a {
+    display: inline-block !important;
+
+    white-space: nowrap !important;
+
+    font-family: "DM Sans", sans-serif !important;
+
+    font-size: 14px !important;
+
+    font-weight: 500 !important;
+
+    color: #29272B !important;
+
+    padding-bottom: 5px !important;
+
+    border-bottom: 1px solid #29272B !important;
+
+    transition: all 0.3s ease !important;
+}
+
+
+.hero-links a:hover {
+    color: #806A99 !important;
+
+    border-color: #806A99 !important;
+}
+
+
+/* =========================================================
+   PHOTO FIX
+========================================================= */
+
+.hero-right {
+    position: relative !important;
+
+    width: 100%;
+
+    min-height: 520px;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+}
+
+
+.photo-frame {
+    width: 350px !important;
+
+    height: 455px !important;
+
+    overflow: hidden !important;
+
+    border-radius: 175px 175px 25px 25px !important;
+
+    background: #F1DDE1 !important;
+
+    border: 7px solid #FFFFFF !important;
+
+    position: relative !important;
+
+    z-index: 3 !important;
+
+    box-shadow:
+        0 20px 45px rgba(80, 65, 85, 0.10) !important;
+}
+
+
+.photo-frame img {
+    width: 100% !important;
+
+    height: 100% !important;
+
+    object-fit: cover !important;
+}
+
+
+/* =========================================================
+   PASTEL DECORATIONS
+========================================================= */
+
+.decoration-one {
+    width: 180px !important;
+    height: 180px !important;
+
+    background: #DDD4EA !important;
+
+    top: 20px !important;
+    right: 0 !important;
+
+    border-radius: 50% !important;
+
+    z-index: 1 !important;
+}
+
+
+.decoration-two {
+    width: 100px !important;
+    height: 100px !important;
+
+    background: #DDE8DF !important;
+
+    bottom: 55px !important;
+    left: 10px !important;
+
+    border-radius: 50% !important;
+
+    z-index: 1 !important;
+}
+
+
+/* =========================================================
+   PHOTO CAPTION
+========================================================= */
+
+.photo-caption {
+    width: 350px !important;
+
+    display: flex !important;
+
+    justify-content: space-between !important;
+
+    margin-top: 17px !important;
+
+    font-size: 10px !important;
+
+    letter-spacing: 1.5px !important;
+
+    color: #716D73 !important;
+}
+
+
+/* =========================================================
+   PASTEL ABOUT SECTION
+========================================================= */
+
+.about-preview {
+    background: #F1DDE1 !important;
+
+    padding: 105px 9% !important;
+
+    display: grid !important;
+
+    grid-template-columns: 80px 1fr !important;
+
+    gap: 55px !important;
+
+    border-top: 1px solid #E5E0DC;
+
+    border-bottom: 1px solid #E5E0DC;
+}
+
+
+.section-label {
+    color: #806A99 !important;
+}
+
+
+/* =========================================================
+   WHAT I'M DOING
+========================================================= */
+
+.doing-section {
+    background: #FBF9F5 !important;
+
+    padding: 110px 9% !important;
+
+    display: grid !important;
+
+    grid-template-columns: 0.8fr 1.2fr !important;
+
+    gap: 100px !important;
+}
+
+
+.doing-item {
+    border-bottom: 1px solid #E5E0DC !important;
+
+    padding: 29px 0 !important;
+}
+
+
+/* =========================================================
+   SKILLS — PASTEL CARDS
+========================================================= */
+
+.skills-section {
+    background: #FFFFFF !important;
+
+    padding: 110px 9% !important;
+}
+
+
+.skills-list {
+    display: grid !important;
+
+    grid-template-columns: repeat(3, 1fr) !important;
+
+    gap: 22px !important;
+}
+
+
+.skill-group {
+    min-height: 190px !important;
+
+    padding: 32px !important;
+
+    border-radius: 22px !important;
+}
+
+
+/* Lavender */
+
+.skill-group:nth-child(1) {
+    background: #DDD4EA !important;
+}
+
+
+/* Sage */
+
+.skill-group:nth-child(2) {
+    background: #DDE8DF !important;
+}
+
+
+/* Powder blue */
+
+.skill-group:nth-child(3) {
+    background: #DCE8F0 !important;
+}
+
+
+/* =========================================================
+   PROJECT / CV LINKS
+========================================================= */
+
+.skill-actions {
+    display: grid !important;
+
+    grid-template-columns: 1fr 1fr !important;
+
+    gap: 40px !important;
+
+    margin-top: 70px !important;
+}
+
+
+.large-link {
+    font-family: "Prata", serif !important;
+
+    font-size: 27px !important;
+
+    display: flex !important;
+
+    justify-content: space-between !important;
+
+    padding: 24px 0 !important;
+
+    border-top: 1px solid #29272B !important;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #FBF9F5 !important;
+
+    padding: 32px 7% !important;
+
+    display: flex !important;
+
+    justify-content: space-between !important;
+
+    align-items: center !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .hero {
+        grid-template-columns: 1fr !important;
+
+        text-align: center !important;
+
+        padding: 70px 7% 80px !important;
+    }
+
+    .hero-left {
+        margin: auto;
+    }
+
+    .hero-description {
+        margin: auto;
+    }
+
+    .hero-links {
+        justify-content: center !important;
+    }
+
+    .hero-right {
+        margin: auto;
+    }
+
+    .doing-section {
+        grid-template-columns: 1fr !important;
+
+        gap: 55px !important;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 18px 22px !important;
+
+        flex-wrap: wrap !important;
+
+        gap: 18px !important;
+    }
+
+    .nav-links {
+        order: 3;
+
+        width: 100%;
+
+        gap: 28px !important;
+    }
+
+    .hero {
+        padding: 60px 22px 75px !important;
+    }
+
+    .hero h1 {
+        font-size: 65px !important;
+    }
+
+    .hero-links {
+        gap: 28px !important;
+
+        justify-content: center !important;
+    }
+
+    .photo-frame {
+        width: 275px !important;
+
+        height: 360px !important;
+    }
+
+    .photo-caption {
+        width: 275px !important;
+    }
+
+    .about-preview {
+        grid-template-columns: 1fr !important;
+
+        padding: 75px 22px !important;
+
+        gap: 15px !important;
+    }
+
+    .doing-section {
+        padding: 75px 22px !important;
+    }
+
+    .skills-section {
+        padding: 75px 22px !important;
+    }
+
+    .skill-actions {
+        grid-template-columns: 1fr !important;
+
+        gap: 15px !important;
+    }
+
+    footer {
+        flex-direction: column !important;
+
+        align-items: flex-start !important;
+
+        padding: 30px 22px !important;
+    }
+}
