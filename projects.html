@@ -1,105 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Projects | Ayushi Sensharma</title>
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Prata&display=swap"
+        rel="stylesheet"
+    >
 
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css?v=3">
-    <link rel="stylesheet" href="inner-pages.css?v=1">
+
+    <!-- Inner pages stylesheet -->
+    <link rel="stylesheet" href="inner-pages.css?v=2">
 </head>
+
 
 <body>
 
-<header class="site-header">
-    <div class="nav-wrap">
+    <!-- =====================================================
+         NAVIGATION
+         Same header as Home page
+         ===================================================== -->
 
-        <a href="index.html" class="logo">Ayushi.</a>
+    <nav class="navbar">
 
-        <nav class="main-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html" class="active">Projects</a>
-            <a href="mailto:ayushi.sensharma.2025@sse.ac.in" class="nav-contact">
-                Contact →
+        <div class="nav-inner">
+
+            <a href="index.html" class="nav-logo">
+                Ayushi.
             </a>
-        </nav>
 
-    </div>
-</header>
+            <div class="nav-links">
 
+                <a href="index.html">
+                    Home
+                </a>
 
-<main>
+                <a href="about.html">
+                    About
+                </a>
 
-    <!-- PAGE INTRO -->
+                <a href="projects.html">
+                    Projects
+                </a>
 
-    <section class="page-hero projects-hero">
+                <a href="mailto:ayushi.sensharma.2025@sse.ac.in">
+                    Contact →
+                </a>
 
-        <div class="page-hero-inner">
-
-            <p class="eyebrow">SELECTED WORK</p>
-
-            <h1>
-                From questions<br>
-                <span>to analysis.</span>
-            </h1>
-
-            <p class="page-intro">
-                A collection of academic and data-driven projects exploring
-                economics, statistics, visualization and quantitative analysis.
-            </p>
+            </div>
 
         </div>
 
-    </section>
+    </nav>
 
 
-    <!-- GITHUB PROJECTS -->
+    <!-- =====================================================
+         PROJECTS HERO
+         ===================================================== -->
 
-    <section class="inner-section projects-section">
+    <main>
 
-        <div class="section-number">01</div>
+        <section class="projects-hero">
 
-        <div class="section-content">
+            <div class="projects-label">
+                SELECTED WORK
+            </div>
 
-            <div class="section-heading">
-                <p class="eyebrow">GITHUB PROJECTS</p>
-                <h2>Projects I've worked on.</h2>
+            <h1>
+                From questions
+                <br>
+                <span>to analysis.</span>
+            </h1>
+
+            <p>
+                A collection of academic and data-driven projects
+                exploring economics, statistics, visualization and
+                quantitative analysis.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             GITHUB PROJECTS
+             ================================================= -->
+
+        <section class="projects-section">
+
+            <div class="projects-section-title">
+
+                <h2>
+                    Projects
+                </h2>
+
+                <span>
+                    GitHub · 04
+                </span>
+
             </div>
 
 
-            <div class="project-grid">
+            <div class="project-list">
 
 
-                <!-- PROJECT 1 -->
+                <!-- =========================================
+                     PROJECT 01
+                     ========================================= -->
 
-                <article class="project-card project-lavender">
+                <article class="project-card">
 
-                    <div class="project-top">
-                        <span class="project-number">01</span>
-                        <span class="project-type">ORANGE · DATA MINING</span>
+                    <div class="project-number">
+                        01
                     </div>
 
-                    <h3>
-                        Hotel Booking Cancellation Classification
-                    </h3>
+                    <div>
 
-                    <p>
-                        A data mining project focused on classifying hotel
-                        booking cancellations using Orange and exploring
-                        patterns associated with booking outcomes.
-                    </p>
+                        <h3>
+                            Hotel Booking Cancellation Classification
+                        </h3>
 
-                    <div class="project-tags">
-                        <span>Data Mining</span>
-                        <span>Classification</span>
-                        <span>Orange</span>
+                        <p>
+                            A classification project using data mining
+                            techniques in Orange to examine hotel booking
+                            cancellations and identify patterns associated
+                            with cancellation behaviour.
+                        </p>
+
+                        <span class="project-type">
+                            Data Mining · Orange
+                        </span>
+
                     </div>
 
                     <a
@@ -108,35 +149,39 @@
                         rel="noopener noreferrer"
                         class="project-link"
                     >
-                        View on GitHub ↗
+                        GitHub ↗
                     </a>
 
                 </article>
 
 
-                <!-- PROJECT 2 -->
+                <!-- =========================================
+                     PROJECT 02
+                     ========================================= -->
 
-                <article class="project-card project-blush">
+                <article class="project-card">
 
-                    <div class="project-top">
-                        <span class="project-number">02</span>
-                        <span class="project-type">PYTHON · VISUALIZATION</span>
+                    <div class="project-number">
+                        02
                     </div>
 
-                    <h3>
-                        Price Rigidity Pre &amp; Post COVID in India
-                    </h3>
+                    <div>
 
-                    <p>
-                        A visual analysis comparing price behaviour before
-                        and after COVID-19 in India using Python-based
-                        data visualization.
-                    </p>
+                        <h3>
+                            Price Rigidity Pre &amp; Post COVID in India
+                        </h3>
 
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Economics</span>
-                        <span>Visualization</span>
+                        <p>
+                            A visual analysis of price rigidity in India
+                            before and after the COVID-19 period, using
+                            Python-based data analysis and visualization
+                            techniques.
+                        </p>
+
+                        <span class="project-type">
+                            Python · Data Visualization
+                        </span>
+
                     </div>
 
                     <a
@@ -145,35 +190,38 @@
                         rel="noopener noreferrer"
                         class="project-link"
                     >
-                        View on GitHub ↗
+                        GitHub ↗
                     </a>
 
                 </article>
 
 
-                <!-- PROJECT 3 -->
+                <!-- =========================================
+                     PROJECT 03
+                     ========================================= -->
 
-                <article class="project-card project-blue">
+                <article class="project-card">
 
-                    <div class="project-top">
-                        <span class="project-number">03</span>
-                        <span class="project-type">TABLEAU · DASHBOARD</span>
+                    <div class="project-number">
+                        03
                     </div>
 
-                    <h3>
-                        India Digital Payments &amp; COVID-19
-                    </h3>
+                    <div>
 
-                    <p>
-                        An interactive Tableau dashboard examining the impact
-                        of COVID-19 on UPI, digital payments and currency
-                        circulation in India.
-                    </p>
+                        <h3>
+                            India Digital Payments &amp; COVID-19
+                        </h3>
 
-                    <div class="project-tags">
-                        <span>Tableau</span>
-                        <span>Dashboard</span>
-                        <span>India</span>
+                        <p>
+                            An interactive Tableau dashboard examining
+                            changes in UPI, digital payments and currency
+                            circulation in India during the COVID-19 period.
+                        </p>
+
+                        <span class="project-type">
+                            Tableau · Dashboard
+                        </span>
+
                     </div>
 
                     <a
@@ -182,36 +230,39 @@
                         rel="noopener noreferrer"
                         class="project-link"
                     >
-                        View on GitHub ↗
+                        GitHub ↗
                     </a>
 
                 </article>
 
 
-                <!-- PROJECT 4 -->
+                <!-- =========================================
+                     PROJECT 04
+                     ========================================= -->
 
-                <article class="project-card project-sage">
+                <article class="project-card">
 
-                    <div class="project-top">
-                        <span class="project-number">04</span>
-                        <span class="project-type">R · ECONOMETRICS</span>
+                    <div class="project-number">
+                        04
                     </div>
 
-                    <h3>
-                        Fiscal Multiplier in India:
-                        Pre &amp; Post COVID
-                    </h3>
+                    <div>
 
-                    <p>
-                        An empirical analysis of India's fiscal multiplier
-                        before and after COVID-19 using VAR, Granger causality
-                        and impulse response analysis.
-                    </p>
+                        <h3>
+                            Fiscal Multiplier in India:
+                            Pre &amp; Post COVID
+                        </h3>
 
-                    <div class="project-tags">
-                        <span>R</span>
-                        <span>VAR</span>
-                        <span>Econometrics</span>
+                        <p>
+                            An empirical analysis of India's fiscal multiplier
+                            before and after COVID-19 using VAR modelling,
+                            Granger causality and impulse response analysis.
+                        </p>
+
+                        <span class="project-type">
+                            R · Econometrics · VAR
+                        </span>
+
                     </div>
 
                     <a
@@ -220,99 +271,106 @@
                         rel="noopener noreferrer"
                         class="project-link"
                     >
-                        View on GitHub ↗
+                        GitHub ↗
                     </a>
 
                 </article>
 
-
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- PUBLISHED RESEARCH -->
+        <!-- =================================================
+             PUBLISHED RESEARCH
+             ================================================= -->
 
-    <section class="inner-section research-section">
+        <section class="research-section">
 
-        <div class="section-number">02</div>
-
-        <div class="section-content">
-
-            <div class="section-heading">
-                <p class="eyebrow">PUBLISHED RESEARCH</p>
-                <h2>Research &amp; academic work.</h2>
+            <div class="section-label">
+                Published Research
             </div>
 
 
-            <article class="research-card">
+            <div class="research-card">
 
-                <div class="research-meta">
-                    <span>2026</span>
-                    <span>SPRINGER</span>
-                </div>
+                <span class="project-number">
+                    RESEARCH PAPER
+                </span>
+
 
                 <h3>
-                    Rewarding Fathers, Penalizing Mothers –
+                    Rewarding Fathers, Penalizing Mothers —
                     A Quantitative Evidence on the Unequal Gains
                     of Parents in Indian Labor Market
                 </h3>
 
+
                 <p class="research-authors">
-                    With Ashish Sharma and Swati Agrawal
+                    Ayushi Sensharma · Ashish Sharma · Swati Agrawal
                 </p>
+
 
                 <p>
-                    Quantitative research examining unequal labour-market
-                    outcomes of parents in India using an interactive
-                    regression model.
+                    Published in
+                    <em>ICT Analysis and Applications</em>,
+                    Volume 1655, Proceedings of ICT4SD 2025,
+                    Springer, Lecture Notes in Networks and Systems,
+                    pp. 396–405.
                 </p>
 
-                <div class="research-footer">
 
-                    <span>
-                        ICT Analysis and Applications · Volume 1655
-                    </span>
+                <p>
+                    The study uses quantitative analysis to examine
+                    unequal labour-market gains associated with parenthood
+                    in India.
+                </p>
 
-                    <span>
-                        Proceedings of ICT4SD 2025
-                    </span>
+
+                <div class="research-links">
+
+                    <a
+                        href="https://doi.org/10.1007/978-3-032-06700-5_40"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        DOI ↗
+                    </a>
+
+                    <a
+                        href="https://doi.org/10.1007/978-3-032-06700-5_40"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Springer ↗
+                    </a>
 
                 </div>
 
-                <div class="research-award">
-                    ★ Best Paper Award · ICSBPIM 2025
-                </div>
+            </div>
 
-            </article>
+        </section>
 
-        </div>
-
-    </section>
-
-</main>
+    </main>
 
 
-<footer class="site-footer">
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
 
-    <div class="footer-inner">
+    <footer class="inner-footer">
 
-        <div>
-            <p class="footer-name">Ayushi Sensharma</p>
-            <p class="footer-sub">
-                Economics · Statistics · Data Analytics
-            </p>
-        </div>
+        <p>
+            © 2026 Ayushi Sensharma
+        </p>
 
-        <a href="#top" class="back-top">
-            Back to top ↑
+        <a href="index.html">
+            Back to home ↑
         </a>
 
-    </div>
+    </footer>
 
-</footer>
 
 </body>
+
 </html>
