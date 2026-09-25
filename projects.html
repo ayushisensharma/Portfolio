@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Projects | Ayushi Sensharma</title>
@@ -11,293 +9,333 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Prata&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
 
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css?v=3">
 
-    <!-- Inner pages stylesheet -->
-    <link rel="stylesheet" href="inner-pages.css?v=2">
+    <!-- Inner page stylesheet -->
+    <link rel="stylesheet" href="inner-pages.css?v=3">
 </head>
-
 
 <body>
 
-    <!-- =====================================================
-         NAVIGATION
-         Same header as Home page
-         ===================================================== -->
+    <!-- ================= NAVIGATION ================= -->
 
-    <nav class="navbar">
-
+    <header class="navbar">
         <div class="nav-inner">
 
             <a href="index.html" class="nav-logo">
                 Ayushi.
             </a>
 
-            <div class="nav-links">
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a href="projects.html">
-                    Projects
-                </a>
-
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html" class="active">Projects</a>
                 <a href="mailto:ayushi.sensharma.2025@sse.ac.in">
-                    Contact →
+                    Contact <span>↗</span>
                 </a>
-
-            </div>
+            </nav>
 
         </div>
+    </header>
 
-    </nav>
 
-
-    <!-- =====================================================
-         PROJECTS HERO
-         ===================================================== -->
+    <!-- ================= PROJECT HERO ================= -->
 
     <main>
 
-        <section class="projects-hero">
+        <section class="page-hero">
 
-            <div class="projects-label">
-                SELECTED WORK
+            <div class="page-hero-number">
+                05
             </div>
 
-            <h1>
-                From questions
-                <br>
-                <span>to analysis.</span>
-            </h1>
+            <div>
+                <p class="eyebrow">
+                    SELECTED WORK
+                </p>
 
-            <p>
-                A collection of academic and data-driven projects
-                exploring economics, statistics, visualization and
-                quantitative analysis.
-            </p>
+                <h1>
+                    Projects &<br>
+                    <em>Analysis.</em>
+                </h1>
+
+                <p class="page-intro">
+                    A collection of projects exploring economics, data analysis,
+                    econometrics and visualization.
+                </p>
+            </div>
 
         </section>
 
 
-        <!-- =================================================
-             GITHUB PROJECTS
-             ================================================= -->
+        <!-- ================= PROJECTS ================= -->
 
         <section class="projects-section">
 
-            <div class="projects-section-title">
+            <div class="section-heading">
+                <p class="eyebrow">GITHUB PROJECTS</p>
 
                 <h2>
-                    Projects
+                    Data, economics<br>
+                    &amp; <em>analysis.</em>
                 </h2>
-
-                <span>
-                    GitHub · 04
-                </span>
-
             </div>
 
 
-            <div class="project-list">
+            <!-- PROJECT 01 -->
 
+            <article class="project-card project-lavender">
 
-                <!-- =========================================
-                     PROJECT 01
-                     ========================================= -->
+                <div class="project-number">
+                    01
+                </div>
 
-                <article class="project-card">
+                <div class="project-content">
 
-                    <div class="project-number">
-                        01
-                    </div>
+                    <p class="project-type">
+                        ECONOMETRICS · R
+                    </p>
 
-                    <div>
+                    <h3>
+                        The Fiscal Multiplier in India:
+                        Empirical Evidence from Post-COVID Stimulus
+                    </h3>
 
-                        <h3>
-                            Hotel Booking Cancellation Classification
-                        </h3>
+                    <p>
+                        Examines the effectiveness of fiscal policy in India by
+                        estimating the fiscal multiplier before and after COVID-19.
+                        The analysis uses VAR models, Granger causality and
+                        impulse response functions to study the relationship
+                        between government expenditure and economic output.
+                    </p>
 
-                        <p>
-                            A classification project using data mining
-                            techniques in Orange to examine hotel booking
-                            cancellations and identify patterns associated
-                            with cancellation behaviour.
-                        </p>
-
-                        <span class="project-type">
-                            Data Mining · Orange
-                        </span>
-
-                    </div>
-
-                    <a
-                        href="https://github.com/ayushisensharma/HOTEL-BOOKING-CANCELLATION-CLASSIFICATION"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link"
-                    >
-                        GitHub ↗
-                    </a>
-
-                </article>
-
-
-                <!-- =========================================
-                     PROJECT 02
-                     ========================================= -->
-
-                <article class="project-card">
-
-                    <div class="project-number">
-                        02
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Price Rigidity Pre &amp; Post COVID in India
-                        </h3>
-
-                        <p>
-                            A visual analysis of price rigidity in India
-                            before and after the COVID-19 period, using
-                            Python-based data analysis and visualization
-                            techniques.
-                        </p>
-
-                        <span class="project-type">
-                            Python · Data Visualization
-                        </span>
-
-                    </div>
-
-                    <a
-                        href="https://github.com/ayushisensharma/PRICE-RIGIDITY-PRE-AND-POST-COVID-IN-INDIA_VISUALIZATIONS"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link"
-                    >
-                        GitHub ↗
-                    </a>
-
-                </article>
-
-
-                <!-- =========================================
-                     PROJECT 03
-                     ========================================= -->
-
-                <article class="project-card">
-
-                    <div class="project-number">
-                        03
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            India Digital Payments &amp; COVID-19
-                        </h3>
-
-                        <p>
-                            An interactive Tableau dashboard examining
-                            changes in UPI, digital payments and currency
-                            circulation in India during the COVID-19 period.
-                        </p>
-
-                        <span class="project-type">
-                            Tableau · Dashboard
-                        </span>
-
-                    </div>
-
-                    <a
-                        href="https://github.com/ayushisensharma/india-digital-payments-covid-tableau"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link"
-                    >
-                        GitHub ↗
-                    </a>
-
-                </article>
-
-
-                <!-- =========================================
-                     PROJECT 04
-                     ========================================= -->
-
-                <article class="project-card">
-
-                    <div class="project-number">
-                        04
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Fiscal Multiplier in India:
-                            Pre &amp; Post COVID
-                        </h3>
-
-                        <p>
-                            An empirical analysis of India's fiscal multiplier
-                            before and after COVID-19 using VAR modelling,
-                            Granger causality and impulse response analysis.
-                        </p>
-
-                        <span class="project-type">
-                            R · Econometrics · VAR
-                        </span>
-
+                    <div class="project-tags">
+                        <span>R</span>
+                        <span>VAR</span>
+                        <span>Granger Causality</span>
+                        <span>IRF</span>
                     </div>
 
                     <a
                         href="https://github.com/ayushisensharma/Fiscal-Multiplier-India-Pre-Post-Covid"
                         target="_blank"
-                        rel="noopener noreferrer"
                         class="project-link"
                     >
-                        GitHub ↗
+                        View on GitHub ↗
                     </a>
 
-                </article>
+                </div>
 
-            </div>
+            </article>
+
+
+            <!-- PROJECT 02 -->
+
+            <article class="project-card project-blush">
+
+                <div class="project-number">
+                    02
+                </div>
+
+                <div class="project-content">
+
+                    <p class="project-type">
+                        PYTHON · ECONOMIC DATA ANALYSIS
+                    </p>
+
+                    <h3>
+                        Gender Gaps in Labour Force Participation:
+                        A Comparative Analysis of South Asia, 1990–2025
+                    </h3>
+
+                    <p>
+                        Analyzes male and female labour force participation in
+                        India and selected South Asian countries using World Bank
+                        data. The project examines long-term trends, gender gaps,
+                        female-to-male participation ratios and changes in
+                        participation across different periods.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Matplotlib</span>
+                        <span>World Bank Data</span>
+                    </div>
+
+                    <a
+                        href="https://github.com/ayushisensharma/Female-Labour-Force-Participation-in-South-Asia-Trends-and-Gender-Gaps-1990-2025"
+                        target="_blank"
+                        class="project-link"
+                    >
+                        View on GitHub ↗
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 03 -->
+
+            <article class="project-card project-sage">
+
+                <div class="project-number">
+                    03
+                </div>
+
+                <div class="project-content">
+
+                    <p class="project-type">
+                        DATA MINING · ORANGE
+                    </p>
+
+                    <h3>
+                        Hotel Booking Cancellation Classification
+                    </h3>
+
+                    <p>
+                        Uses data mining techniques to analyze hotel booking
+                        cancellations and identify factors associated with
+                        cancellation behaviour. Classification models were
+                        developed and evaluated using the Orange data mining
+                        platform.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Orange</span>
+                        <span>Data Mining</span>
+                        <span>Random Forest</span>
+                        <span>Naive Bayes</span>
+                    </div>
+
+                    <a
+                        href="https://github.com/ayushisensharma/HOTEL-BOOKING-CANCELLATION-CLASSIFICATION"
+                        target="_blank"
+                        class="project-link"
+                    >
+                        View on GitHub ↗
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 04 -->
+
+            <article class="project-card project-blue">
+
+                <div class="project-number">
+                    04
+                </div>
+
+                <div class="project-content">
+
+                    <p class="project-type">
+                        TABLEAU · DATA VISUALIZATION
+                    </p>
+
+                    <h3>
+                        India Digital Payments &amp; COVID-19
+                    </h3>
+
+                    <p>
+                        An interactive Tableau dashboard examining changes in
+                        UPI usage, digital payments and currency circulation in
+                        India, with a focus on the period surrounding the
+                        COVID-19 pandemic.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Tableau</span>
+                        <span>Dashboard</span>
+                        <span>UPI</span>
+                        <span>Data Visualization</span>
+                    </div>
+
+                    <a
+                        href="https://github.com/ayushisensharma/india-digital-payments-covid-tableau"
+                        target="_blank"
+                        class="project-link"
+                    >
+                        View on GitHub ↗
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 05 -->
+
+            <article class="project-card project-yellow">
+
+                <div class="project-number">
+                    05
+                </div>
+
+                <div class="project-content">
+
+                    <p class="project-type">
+                        PYTHON · VISUALIZATION
+                    </p>
+
+                    <h3>
+                        Price Rigidity Pre &amp; Post COVID in India
+                    </h3>
+
+                    <p>
+                        Explores price behaviour in India before and after the
+                        COVID-19 period through data visualization and
+                        comparative analysis using Python.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>Matplotlib</span>
+                        <span>Visualization</span>
+                    </div>
+
+                    <a
+                        href="https://github.com/ayushisensharma/PRICE-RIGIDITY-PRE-AND-POST-COVID-IN-INDIA_VISUALIZATIONS"
+                        target="_blank"
+                        class="project-link"
+                    >
+                        View on GitHub ↗
+                    </a>
+
+                </div>
+
+            </article>
 
         </section>
 
 
-        <!-- =================================================
-             PUBLISHED RESEARCH
-             ================================================= -->
+        <!-- ================= PUBLISHED RESEARCH ================= -->
 
         <section class="research-section">
 
-            <div class="section-label">
-                Published Research
+            <div class="section-heading">
+                <p class="eyebrow">PUBLISHED RESEARCH</p>
+
+                <h2>
+                    From analysis to<br>
+                    <em>publication.</em>
+                </h2>
             </div>
 
 
-            <div class="research-card">
+            <article class="research-card">
 
-                <span class="project-number">
-                    RESEARCH PAPER
-                </span>
-
+                <div class="research-label">
+                    SPRINGER · 2026
+                </div>
 
                 <h3>
                     Rewarding Fathers, Penalizing Mothers —
@@ -305,72 +343,108 @@
                     of Parents in Indian Labor Market
                 </h3>
 
-
                 <p class="research-authors">
                     Ayushi Sensharma · Ashish Sharma · Swati Agrawal
                 </p>
 
-
                 <p>
-                    Published in
-                    <em>ICT Analysis and Applications</em>,
+                    Quantitative research examining unequal labour-market
+                    outcomes associated with parenthood in India using
+                    regression-based analysis.
+                </p>
+
+                <p class="research-publication">
+                    Published in <strong>ICT Analysis and Applications</strong>,
                     Volume 1655, Proceedings of ICT4SD 2025,
-                    Springer, Lecture Notes in Networks and Systems,
+                    Springer Lecture Notes in Networks and Systems,
                     pp. 396–405.
                 </p>
-
-
-                <p>
-                    The study uses quantitative analysis to examine
-                    unequal labour-market gains associated with parenthood
-                    in India.
-                </p>
-
 
                 <div class="research-links">
 
                     <a
                         href="https://doi.org/10.1007/978-3-032-06700-5_40"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        class="project-link"
                     >
                         DOI ↗
                     </a>
 
                     <a
-                        href="https://doi.org/10.1007/978-3-032-06700-5_40"
+                        href="https://link.springer.com/chapter/10.1007/978-3-032-06700-5_40"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        class="project-link"
                     >
                         Springer ↗
                     </a>
 
                 </div>
 
-            </div>
+                <div class="award">
+                    ★ Best Paper Award · ICSBPIM 2025
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="projects-cta">
+
+            <p class="eyebrow">
+                MORE ON GITHUB
+            </p>
+
+            <h2>
+                Want to see the<br>
+                <em>code?</em>
+            </h2>
+
+            <p>
+                Explore the repositories, datasets and analysis behind these projects.
+            </p>
+
+            <a
+                href="https://github.com/ayushisensharma"
+                target="_blank"
+                class="large-text-link"
+            >
+                Visit my GitHub ↗
+            </a>
 
         </section>
 
     </main>
 
 
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
+    <!-- ================= FOOTER ================= -->
 
-    <footer class="inner-footer">
+    <footer class="site-footer">
 
-        <p>
-            © 2026 Ayushi Sensharma
-        </p>
+        <div>
+            <span>© 2026 Ayushi Sensharma</span>
+        </div>
 
-        <a href="index.html">
-            Back to home ↑
-        </a>
+        <div class="footer-links">
+
+            <a
+                href="https://github.com/ayushisensharma"
+                target="_blank"
+            >
+                GitHub
+            </a>
+
+            <a
+                href="mailto:ayushi.sensharma.2025@sse.ac.in"
+            >
+                Email
+            </a>
+
+        </div>
 
     </footer>
 
-
 </body>
-
 </html>
