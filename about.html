@@ -8,7 +8,7 @@
 
     <title>About | Ayushi Sensharma</title>
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -20,14 +20,11 @@
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css?v=3">
 
-    <!-- Inner page stylesheet -->
-    <link rel="stylesheet" href="inner-pages.css?v=3">
-
 
     <style>
 
         /* =====================================================
-           ABOUT PAGE
+           BASIC
         ===================================================== */
 
         * {
@@ -40,33 +37,27 @@
 
         body {
             margin: 0;
-            padding: 0;
-
             background: #FBF9F5;
             color: #29272B;
-
             font-family: "DM Sans", sans-serif;
         }
 
 
         /* =====================================================
-           HEADER
+           NAVIGATION
         ===================================================== */
 
         .about-navbar {
             width: 100%;
-
             background: #FBF9F5;
-
             border-bottom: 1px solid #E5E0DC;
 
             position: relative;
-            z-index: 100;
+            z-index: 10;
         }
 
         .about-nav-inner {
             width: min(1180px, calc(100% - 80px));
-
             min-height: 88px;
 
             margin: 0 auto;
@@ -78,42 +69,38 @@
 
         .about-logo {
             font-family: "Prata", serif;
-
             font-size: 25px;
-            font-weight: 400;
-
             color: #29272B;
-
             text-decoration: none;
 
-            letter-spacing: -0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .about-logo:hover {
+            color: #806A99;
         }
 
         .about-nav-links {
             display: flex;
             align-items: center;
-
             gap: 38px;
         }
 
         .about-nav-links a {
-            font-family: "DM Sans", sans-serif;
-
             font-size: 14px;
             font-weight: 500;
 
             color: #29272B;
-
             text-decoration: none;
 
-            transition: color 0.25s ease,
-                        transform 0.25s ease;
+            transition:
+                color 0.25s ease,
+                transform 0.25s ease;
         }
 
         .about-nav-links a:hover {
             color: #806A99;
-
-            transform: translateY(-1px);
+            transform: translateY(-2px);
         }
 
         .about-nav-links a.active {
@@ -122,59 +109,72 @@
 
 
         /* =====================================================
-           MAIN SECTIONS
+           MAIN
         ===================================================== */
 
         .about-section {
-
             width: min(1180px, calc(100% - 80px));
 
             margin: 0 auto;
 
-            padding: 85px 0;
-
-            border-top: 1px solid #E5E0DC;
+            padding: 110px 0 120px;
         }
 
 
         /* =====================================================
-           SECTION NUMBER + LABEL
+           SECTION LABEL
         ===================================================== */
 
+        .about-section-block {
+            margin-bottom: 145px;
+        }
+
         .section-number {
-
-            display: block;
-
-            margin-bottom: 14px;
+            margin-bottom: 22px;
 
             font-family: "Prata", serif;
-
-            font-size: 25px;
+            font-size: 38px;
 
             color: #806A99;
+
+            transition:
+                transform 0.35s ease,
+                color 0.35s ease;
+        }
+
+        .section-number:hover {
+            transform: translateX(8px);
+            color: #6D587F;
         }
 
         .section-label {
+            display: inline-block;
 
-            display: inline-flex;
+            padding: 14px 25px;
 
-            padding: 10px 19px;
+            border-radius: 40px;
 
             background: #DDD4EA;
 
-            border-radius: 999px;
-
-            font-family: "DM Sans", sans-serif;
-
             font-size: 11px;
-
             font-weight: 700;
 
             letter-spacing: 2px;
 
-            text-transform: uppercase;
-
             color: #806A99;
+
+            margin-bottom: 65px;
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
+        }
+
+        .section-label:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 10px 25px rgba(128, 106, 153, 0.12);
         }
 
 
@@ -186,11 +186,11 @@
 
             display: grid;
 
-            grid-template-columns: 0.75fr 1.5fr;
+            grid-template-columns: 0.85fr 1.15fr;
 
             gap: 100px;
 
-            margin-top: 45px;
+            align-items: start;
         }
 
         .about-me-title {
@@ -199,26 +199,31 @@
 
             font-family: "Prata", serif;
 
-            font-size: 48px;
-
-            line-height: 1.15;
+            font-size: clamp(52px, 6vw, 76px);
 
             font-weight: 400;
 
-            letter-spacing: -1px;
+            line-height: 0.98;
 
-            color: #29272B;
+            letter-spacing: -2px;
+        }
+
+        .about-me-title span {
+            color: #806A99;
+        }
+
+        .about-me-text {
+
+            padding-top: 5px;
         }
 
         .about-me-text p {
 
-            margin: 0 0 22px;
-
-            font-family: "DM Sans", sans-serif;
+            margin: 0 0 28px;
 
             font-size: 16px;
 
-            line-height: 1.85;
+            line-height: 1.9;
 
             color: #716D73;
         }
@@ -233,7 +238,8 @@
         ===================================================== */
 
         .education-list {
-            margin-top: 45px;
+
+            border-top: 1px solid #E5E0DC;
         }
 
         .education-item {
@@ -242,52 +248,64 @@
 
             grid-template-columns: 180px 1fr;
 
-            gap: 50px;
+            gap: 60px;
 
-            padding: 35px 0;
+            padding: 42px 25px;
 
-            border-top: 1px solid #E5E0DC;
+            border-bottom: 1px solid #E5E0DC;
+
+            transition:
+                background 0.35s ease,
+                transform 0.35s ease,
+                padding-left 0.35s ease;
         }
 
-        .education-item:last-child {
-            border-bottom: 1px solid #E5E0DC;
+        .education-item:hover {
+
+            background: #F5F1F8;
+
+            transform: translateX(8px);
+
+            padding-left: 35px;
         }
 
         .education-year {
 
-            font-family: "DM Sans", sans-serif;
+            font-family: "Prata", serif;
 
-            font-size: 13px;
-
-            font-weight: 700;
+            font-size: 18px;
 
             color: #806A99;
+
+            transition: transform 0.35s ease;
+        }
+
+        .education-item:hover .education-year {
+            transform: translateX(5px);
+        }
+
+        .education-content {
+            max-width: 700px;
         }
 
         .education-content h3 {
 
-            margin: 0 0 8px;
+            margin: 0 0 10px;
 
             font-family: "Prata", serif;
 
             font-size: 27px;
 
-            line-height: 1.3;
-
             font-weight: 400;
 
-            color: #29272B;
+            line-height: 1.3;
         }
 
         .education-institution {
 
-            margin: 0 0 10px;
+            margin: 0 0 12px;
 
-            font-family: "DM Sans", sans-serif;
-
-            font-size: 15px;
-
-            font-weight: 600;
+            font-size: 14px;
 
             color: #716D73;
         }
@@ -296,22 +314,20 @@
 
             margin: 0;
 
-            font-family: "DM Sans", sans-serif;
+            font-size: 13px;
 
-            font-size: 14px;
+            font-weight: 600;
 
-            line-height: 1.7;
-
-            color: #716D73;
+            color: #806A99;
         }
 
 
         /* =====================================================
-           WORK EXPERIENCE
+           EXPERIENCE
         ===================================================== */
 
         .experience-wrapper {
-            margin-top: 45px;
+            position: relative;
         }
 
         .experience-card {
@@ -320,7 +336,22 @@
 
             background: #F1DDE1;
 
-            border-radius: 26px;
+            border: 1px solid transparent;
+
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease,
+                border-color 0.4s ease;
+        }
+
+        .experience-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 18px 45px rgba(70, 55, 65, 0.08);
+
+            border-color: #E5C9D0;
         }
 
         .experience-header {
@@ -333,76 +364,98 @@
 
             gap: 30px;
 
-            margin-bottom: 30px;
-        }
+            padding-bottom: 28px;
 
-        .experience-card h3 {
+            margin-bottom: 28px;
 
-            margin: 0 0 8px;
-
-            font-family: "Prata", serif;
-
-            font-size: 30px;
-
-            line-height: 1.3;
-
-            font-weight: 400;
-
-            color: #29272B;
+            border-bottom: 1px solid rgba(128, 106, 153, 0.18);
         }
 
         .experience-company {
 
             margin: 0;
 
-            font-family: "DM Sans", sans-serif;
+            font-family: "Prata", serif;
 
-            font-size: 14px;
+            font-size: 30px;
 
-            font-weight: 600;
+            font-weight: 400;
+        }
+
+        .experience-location {
+
+            margin: 8px 0 0;
+
+            font-size: 13px;
 
             color: #716D73;
         }
 
         .experience-date {
 
-            white-space: nowrap;
+            margin: 0;
 
-            font-family: "DM Sans", sans-serif;
-
-            font-size: 11px;
+            font-size: 12px;
 
             font-weight: 700;
 
-            letter-spacing: 1.5px;
-
-            text-transform: uppercase;
-
             color: #806A99;
+
+            white-space: nowrap;
         }
 
         .experience-list {
 
             margin: 0;
 
-            padding-left: 20px;
+            padding: 0;
+
+            list-style: none;
         }
 
         .experience-list li {
 
-            margin-bottom: 14px;
+            position: relative;
 
-            font-family: "DM Sans", sans-serif;
+            padding-left: 25px;
+
+            margin-bottom: 18px;
 
             font-size: 14px;
 
             line-height: 1.75;
 
-            color: #716D73;
+            color: #5F5962;
+
+            transition:
+                transform 0.3s ease,
+                color 0.3s ease;
         }
 
         .experience-list li:last-child {
             margin-bottom: 0;
+        }
+
+        .experience-list li::before {
+
+            content: "→";
+
+            position: absolute;
+
+            left: 0;
+
+            top: 0;
+
+            color: #806A99;
+
+            font-weight: 700;
+        }
+
+        .experience-list li:hover {
+
+            transform: translateX(6px);
+
+            color: #29272B;
         }
 
 
@@ -416,24 +469,20 @@
 
             margin: 0 auto;
 
-            padding: 45px 0;
+            padding: 38px 0;
 
             border-top: 1px solid #E5E0DC;
 
             display: flex;
 
-            align-items: center;
-
             justify-content: space-between;
 
-            gap: 30px;
+            align-items: center;
         }
 
         .about-footer p {
 
             margin: 0;
-
-            font-family: "DM Sans", sans-serif;
 
             font-size: 12px;
 
@@ -442,8 +491,6 @@
 
         .about-footer a {
 
-            font-family: "DM Sans", sans-serif;
-
             font-size: 12px;
 
             font-weight: 600;
@@ -451,6 +498,8 @@
             color: #29272B;
 
             text-decoration: none;
+
+            transition: color 0.25s ease;
         }
 
         .about-footer a:hover {
@@ -459,69 +508,62 @@
 
 
         /* =====================================================
-           ANIMATION
+           SCROLL ANIMATION
         ===================================================== */
 
-        @keyframes aboutFadeUp {
+        .reveal {
 
-            from {
-                opacity: 0;
-                transform: translateY(18px);
-            }
+            opacity: 0;
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            transform: translateY(35px);
 
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
         }
 
-        .about-section {
-            animation: aboutFadeUp 0.7s ease both;
-        }
+        .reveal.visible {
 
+            opacity: 1;
 
-        /* =====================================================
-           TABLET
-        ===================================================== */
-
-        @media (max-width: 900px) {
-
-            .about-nav-inner {
-
-                width: min(100% - 48px, 1180px);
-            }
-
-            .about-nav-links {
-                gap: 25px;
-            }
-
-            .about-section,
-            .about-footer {
-
-                width: min(100% - 48px, 1180px);
-            }
-
-            .about-me-grid {
-
-                grid-template-columns: 1fr;
-
-                gap: 35px;
-            }
-
-            .education-item {
-
-                grid-template-columns: 140px 1fr;
-
-                gap: 30px;
-            }
-
+            transform: translateY(0);
         }
 
 
         /* =====================================================
            MOBILE
         ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .about-nav-inner {
+                width: calc(100% - 48px);
+            }
+
+            .about-nav-links {
+                gap: 25px;
+            }
+
+            .about-section {
+                width: calc(100% - 48px);
+            }
+
+            .about-me-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+            .education-item {
+
+                grid-template-columns: 130px 1fr;
+
+                gap: 35px;
+            }
+
+        }
+
 
         @media (max-width: 650px) {
 
@@ -548,11 +590,9 @@
 
                 width: 100%;
 
-                display: flex;
+                gap: 14px 20px;
 
                 flex-wrap: wrap;
-
-                gap: 14px 20px;
             }
 
             .about-nav-links a {
@@ -564,21 +604,60 @@
 
                 width: calc(100% - 36px);
 
-                padding: 65px 0;
+                padding: 75px 0 80px;
+            }
+
+            .about-section-block {
+                margin-bottom: 95px;
+            }
+
+            .section-number {
+                font-size: 32px;
+            }
+
+            .section-label {
+
+                margin-bottom: 45px;
+
+                padding: 12px 21px;
+
+                font-size: 10px;
             }
 
             .about-me-title {
-                font-size: 38px;
+
+                font-size: 51px;
+
+                line-height: 1;
+            }
+
+            .about-me-text p {
+                font-size: 14px;
+                line-height: 1.8;
             }
 
 
+            /* Education */
+
             .education-item {
 
-                grid-template-columns: 1fr;
+                display: block;
 
-                gap: 12px;
+                padding: 30px 15px;
+            }
 
-                padding: 28px 0;
+            .education-item:hover {
+
+                transform: none;
+
+                padding-left: 20px;
+            }
+
+            .education-year {
+
+                display: block;
+
+                margin-bottom: 14px;
             }
 
             .education-content h3 {
@@ -586,34 +665,48 @@
             }
 
 
+            /* Experience */
+
             .experience-card {
-
-                padding: 30px 24px;
-
-                border-radius: 20px;
+                padding: 28px;
             }
 
             .experience-header {
 
-                flex-direction: column;
+                display: block;
 
-                gap: 12px;
+                padding-bottom: 22px;
             }
 
-            .experience-card h3 {
-                font-size: 24px;
+            .experience-date {
+
+                display: block;
+
+                margin-top: 15px;
             }
 
+            .experience-company {
+                font-size: 25px;
+            }
+
+            .experience-list li {
+                font-size: 13px;
+            }
+
+
+            /* Footer */
 
             .about-footer {
 
                 width: calc(100% - 36px);
 
-                flex-direction: column;
+                padding: 30px 0;
+
+                gap: 20px;
 
                 align-items: flex-start;
 
-                padding: 35px 0;
+                flex-direction: column;
             }
 
         }
@@ -664,39 +757,36 @@
 
 
 <!-- =====================================================
-     ABOUT PAGE
+     MAIN
 ===================================================== -->
 
-<main>
+<main class="about-section">
 
 
     <!-- =================================================
          01 ABOUT ME
-         NO SEPARATE HERO ABOVE THIS
     ================================================== -->
 
-    <section class="about-section">
+    <section class="about-section-block reveal">
 
-        <span class="section-number">
+        <div class="section-number">
             01
-        </span>
+        </div>
 
-        <span class="section-label">
+        <div class="section-label">
             ABOUT ME
-        </span>
+        </div>
 
 
         <div class="about-me-grid">
 
-            <h2 class="about-me-title">
+            <h1 class="about-me-title">
 
-                Economics,
-                <br>
-                data &
-                <br>
-                curiosity.
+                Economics,<br>
+                data &<br>
+                <span>curiosity.</span>
 
-            </h2>
+            </h1>
 
 
             <div class="about-me-text">
@@ -720,9 +810,8 @@
                 <p>
                     My projects have involved Python, R, Tableau,
                     Orange and econometric analysis, covering topics
-                    such as digital payments, price rigidity,
-                    hotel booking cancellations and India's fiscal
-                    multiplier.
+                    such as digital payments, price rigidity, hotel
+                    booking cancellations and India's fiscal multiplier.
                 </p>
 
             </div>
@@ -732,19 +821,20 @@
     </section>
 
 
+
     <!-- =================================================
          02 EDUCATION
     ================================================== -->
 
-    <section class="about-section">
+    <section class="about-section-block reveal">
 
-        <span class="section-number">
+        <div class="section-number">
             02
-        </span>
+        </div>
 
-        <span class="section-label">
+        <div class="section-label">
             EDUCATION
-        </span>
+        </div>
 
 
         <div class="education-list">
@@ -761,7 +851,8 @@
                 <div class="education-content">
 
                     <h3>
-                        M.Sc. Economics (Data Analytics)
+                        M.Sc. Economics
+                        (Data Analytics)
                     </h3>
 
                     <p class="education-institution">
@@ -789,7 +880,8 @@
                 <div class="education-content">
 
                     <h3>
-                        B.Sc. Economics, Mathematics &amp; Statistics
+                        B.Sc. Economics,
+                        Mathematics &amp; Statistics
                     </h3>
 
                     <p class="education-institution">
@@ -805,24 +897,26 @@
 
             </div>
 
+
         </div>
 
     </section>
+
 
 
     <!-- =================================================
          03 WORK EXPERIENCE
     ================================================== -->
 
-    <section class="about-section">
+    <section class="about-section-block reveal">
 
-        <span class="section-number">
+        <div class="section-number">
             03
-        </span>
+        </div>
 
-        <span class="section-label">
+        <div class="section-label">
             WORK EXPERIENCE
-        </span>
+        </div>
 
 
         <div class="experience-wrapper">
@@ -834,21 +928,20 @@
 
                     <div>
 
-                        <h3>
+                        <h2 class="experience-company">
                             HEAPS Health Solutions
-                        </h3>
+                        </h2>
 
-                        <p class="experience-company">
+                        <p class="experience-location">
                             HEAPS Health Solutions India Pvt. Ltd.
                             · Gurugram
                         </p>
 
                     </div>
 
-
-                    <div class="experience-date">
+                    <p class="experience-date">
                         May — July 2024
-                    </div>
+                    </p>
 
                 </div>
 
@@ -865,14 +958,14 @@
                     <li>
                         Used Python and pandas to clean and
                         deduplicate call logs, standardize medical
-                        condition fields, flag invalid numbers
-                        and identify duplicate records.
+                        condition fields, flag invalid numbers and
+                        identify duplicate records.
                     </li>
 
                     <li>
                         Created a weekly dashboard tracking call
-                        connect rates and reachability over
-                        six weeks using KPI formulas.
+                        connect rates and reachability over six
+                        weeks using KPI formulas.
                     </li>
 
                     <li>
@@ -881,9 +974,9 @@
                     </li>
 
                     <li>
-                        Developed a revenue tracker linking
-                        call outcomes with hospital visits
-                        and billing data.
+                        Developed a revenue tracker linking call
+                        outcomes with hospital visits and billing
+                        data.
                     </li>
 
                 </ul>
@@ -913,6 +1006,52 @@
     </a>
 
 </footer>
+
+
+<!-- =====================================================
+     SCROLL REVEAL
+===================================================== -->
+
+<script>
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+    const revealObserver =
+        new IntersectionObserver(
+
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("visible");
+
+                        revealObserver.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.12
+            }
+
+        );
+
+
+    revealElements.forEach((element) => {
+
+        revealObserver.observe(element);
+
+    });
+
+</script>
 
 
 </body>
