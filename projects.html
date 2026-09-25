@@ -17,7 +17,6 @@
         rel="stylesheet"
     >
 
-    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css?v=3">
 
 
@@ -47,7 +46,7 @@
 
 
         /* =====================================================
-           HEADER
+           NAVIGATION
         ===================================================== */
 
         .projects-navbar {
@@ -58,10 +57,11 @@
             border-bottom: 1px solid #E5E0DC;
 
             position: relative;
-            z-index: 100;
+            z-index: 20;
         }
 
         .projects-nav-inner {
+
             width: min(1180px, calc(100% - 80px));
 
             min-height: 88px;
@@ -74,19 +74,24 @@
         }
 
         .projects-logo {
+
             font-family: "Prata", serif;
 
             font-size: 25px;
-            font-weight: 400;
 
             color: #29272B;
 
             text-decoration: none;
 
-            letter-spacing: -0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .projects-logo:hover {
+            color: #806A99;
         }
 
         .projects-nav-links {
+
             display: flex;
             align-items: center;
 
@@ -94,7 +99,6 @@
         }
 
         .projects-nav-links a {
-            font-family: "DM Sans", sans-serif;
 
             font-size: 14px;
             font-weight: 500;
@@ -109,9 +113,10 @@
         }
 
         .projects-nav-links a:hover {
+
             color: #806A99;
 
-            transform: translateY(-1px);
+            transform: translateY(-2px);
         }
 
         .projects-nav-links a.active {
@@ -120,14 +125,11 @@
 
 
         /* =====================================================
-           PROJECT PAGE INTRO
+           INTRO
         ===================================================== */
 
-        .projects-page {
-            background: #FBF9F5;
-        }
-
         .projects-intro {
+
             width: min(1180px, calc(100% - 80px));
 
             margin: 0 auto;
@@ -144,11 +146,11 @@
         }
 
         .projects-kicker {
+
             margin: 0 0 18px;
 
-            font-family: "DM Sans", sans-serif;
-
             font-size: 10px;
+
             font-weight: 700;
 
             letter-spacing: 2px;
@@ -158,12 +160,8 @@
             color: #806A99;
         }
 
-        /*
-           Smaller than before:
-           maximum 70px instead of 90px
-        */
-
         .projects-intro h1 {
+
             margin: 0;
 
             font-family: "Prata", serif;
@@ -175,22 +173,20 @@
             line-height: 1.05;
 
             letter-spacing: -2px;
-
-            color: #29272B;
         }
 
         .projects-intro h1 em {
+
             font-style: normal;
 
             color: #806A99;
         }
 
         .projects-intro-text {
+
             max-width: 310px;
 
             margin: 0 0 5px;
-
-            font-family: "DM Sans", sans-serif;
 
             font-size: 14px;
 
@@ -201,7 +197,41 @@
 
 
         /* =====================================================
-           PROJECT ROWS
+           PROJECT AREA
+        ===================================================== */
+
+        .projects-list {
+
+            position: relative;
+        }
+
+        /*
+           Thin vertical guide line.
+           Gives the project list a little more visual identity.
+        */
+
+        .projects-list::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: calc(50% - 590px);
+
+            top: 0;
+
+            bottom: 0;
+
+            width: 1px;
+
+            background: #E5E0DC;
+
+            opacity: 0.7;
+        }
+
+
+        /* =====================================================
+           PROJECT ROW
         ===================================================== */
 
         .project-row {
@@ -210,7 +240,7 @@
 
             margin: 0 auto;
 
-            padding: 42px 0;
+            padding: 50px 0;
 
             display: grid;
 
@@ -219,17 +249,20 @@
             gap: 60px;
 
             border-top: 1px solid #E5E0DC;
+
+            position: relative;
+
+            transition:
+                padding-left 0.4s ease,
+                padding-right 0.4s ease;
         }
 
 
-        /* Alternate background */
+        /* Alternating section */
 
         .project-row-accent {
 
             width: 100%;
-
-            padding-top: 42px;
-            padding-bottom: 42px;
 
             padding-left: max(
                 40px,
@@ -251,6 +284,8 @@
 
         .project-index {
 
+            position: relative;
+
             font-family: "Prata", serif;
 
             font-size: 52px;
@@ -258,26 +293,45 @@
             line-height: 1;
 
             color: #C8BCD3;
+
+            transition:
+                color 0.35s ease,
+                transform 0.45s ease;
+        }
+
+        .project-row:hover .project-index {
+
+            color: #806A99;
+
+            transform: translateX(8px);
         }
 
 
         /* =====================================================
-           PROJECT CONTENT
+           PROJECT MAIN
         ===================================================== */
 
         .project-main {
 
             max-width: 850px;
+
+            transition:
+                transform 0.45s ease;
+        }
+
+        .project-row:hover .project-main {
+
+            transform: translateX(5px);
         }
 
 
-        /* Category */
+        /* =====================================================
+           META
+        ===================================================== */
 
         .project-meta {
 
             margin-bottom: 17px;
-
-            font-family: "DM Sans", sans-serif;
 
             font-size: 10px;
 
@@ -286,6 +340,14 @@
             letter-spacing: 1.6px;
 
             color: #806A99;
+
+            transition:
+                letter-spacing 0.35s ease;
+        }
+
+        .project-row:hover .project-meta {
+
+            letter-spacing: 2px;
         }
 
         .project-meta span {
@@ -296,10 +358,9 @@
         }
 
 
-        /*
-           Smaller project titles
-           maximum 44px instead of 52px
-        */
+        /* =====================================================
+           PROJECT TITLE
+        ===================================================== */
 
         .project-main h2 {
 
@@ -316,18 +377,29 @@
             letter-spacing: -1px;
 
             color: #29272B;
+
+            transition:
+                color 0.35s ease,
+                transform 0.35s ease;
+        }
+
+        .project-row:hover .project-main h2 {
+
+            color: #806A99;
+
+            transform: translateX(3px);
         }
 
 
-        /* Description */
+        /* =====================================================
+           DESCRIPTION
+        ===================================================== */
 
         .project-summary {
 
             max-width: 700px;
 
             margin: 0;
-
-            font-family: "DM Sans", sans-serif;
 
             font-size: 14px;
 
@@ -338,12 +410,12 @@
 
 
         /* =====================================================
-           TOOLS + GITHUB
+           PROJECT BOTTOM
         ===================================================== */
 
         .project-bottom {
 
-            margin-top: 25px;
+            margin-top: 27px;
 
             padding-top: 17px;
 
@@ -357,6 +429,11 @@
 
             gap: 25px;
         }
+
+
+        /* =====================================================
+           TOOLS
+        ===================================================== */
 
         .project-tools {
 
@@ -375,8 +452,6 @@
 
             border-radius: 30px;
 
-            font-family: "DM Sans", sans-serif;
-
             font-size: 10px;
 
             font-weight: 600;
@@ -384,13 +459,32 @@
             color: #5F5962;
 
             background: rgba(255,255,255,0.5);
+
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease,
+                border-color 0.3s ease;
         }
+
+        .project-tools span:hover {
+
+            transform: translateY(-3px);
+
+            background: #DDD4EA;
+
+            border-color: #DDD4EA;
+
+            color: #806A99;
+        }
+
+
+        /* =====================================================
+           GITHUB
+        ===================================================== */
 
         .project-github {
 
             flex-shrink: 0;
-
-            font-family: "DM Sans", sans-serif;
 
             font-size: 12px;
 
@@ -400,18 +494,73 @@
 
             text-decoration: none;
 
-            border-bottom: 1px solid #29272B;
+            position: relative;
 
-            padding-bottom: 3px;
+            padding-bottom: 5px;
 
-            transition: 0.25s ease;
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .project-github::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: 0;
+
+            width: 100%;
+
+            height: 1px;
+
+            background: #29272B;
+
+            transform-origin: left;
+
+            transition:
+                transform 0.35s ease,
+                background 0.35s ease;
         }
 
         .project-github:hover {
 
             color: #806A99;
 
-            border-color: #806A99;
+            transform: translateX(4px);
+        }
+
+        .project-github:hover::after {
+
+            transform: scaleX(0.65);
+
+            background: #806A99;
+        }
+
+
+        /* =====================================================
+           SCROLL REVEAL
+        ===================================================== */
+
+        .project-reveal {
+
+            opacity: 0;
+
+            transform: translateY(35px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+        .project-reveal.visible {
+
+            opacity: 1;
+
+            transform: translateY(0);
         }
 
 
@@ -425,7 +574,7 @@
 
             margin: 0 auto;
 
-            padding: 95px 0 90px;
+            padding: 110px 0 95px;
 
             display: grid;
 
@@ -445,8 +594,6 @@
             font-weight: 400;
 
             line-height: 1.12;
-
-            color: #29272B;
         }
 
         .research-new-heading h2 em {
@@ -458,16 +605,57 @@
 
         .research-new-card {
 
+            position: relative;
+
             padding: 40px;
 
             background: #F1DDE1;
+
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+        }
+
+        .research-new-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 5px;
+
+            height: 100%;
+
+            background: #806A99;
+
+            transform: scaleY(0);
+
+            transform-origin: bottom;
+
+            transition:
+                transform 0.4s ease;
+        }
+
+        .research-new-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 20px 45px rgba(70, 55, 65, 0.08);
+        }
+
+        .research-new-card:hover::before {
+
+            transform: scaleY(1);
         }
 
         .research-new-meta {
 
             margin: 0 0 22px;
-
-            font-family: "DM Sans", sans-serif;
 
             font-size: 10px;
 
@@ -489,15 +677,11 @@
             font-weight: 400;
 
             line-height: 1.35;
-
-            color: #29272B;
         }
 
         .research-new-authors {
 
             margin: 0 0 22px;
-
-            font-family: "DM Sans", sans-serif;
 
             font-size: 12px;
 
@@ -509,8 +693,6 @@
         .research-new-description {
 
             margin: 0;
-
-            font-family: "DM Sans", sans-serif;
 
             font-size: 14px;
 
@@ -530,8 +712,6 @@
 
         .research-new-links a {
 
-            font-family: "DM Sans", sans-serif;
-
             font-size: 12px;
 
             font-weight: 700;
@@ -543,13 +723,22 @@
             border-bottom: 1px solid #29272B;
 
             padding-bottom: 3px;
+
+            transition:
+                color 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .research-new-links a:hover {
+
+            color: #806A99;
+
+            border-color: #806A99;
         }
 
         .research-award-new {
 
             margin: 25px 0 0;
-
-            font-family: "DM Sans", sans-serif;
 
             font-size: 11px;
 
@@ -565,11 +754,18 @@
 
         .github-new {
 
-            padding: 85px 30px 95px;
+            padding: 90px 30px 100px;
 
             text-align: center;
 
             background: #DDE8DF;
+
+            transition: background 0.5s ease;
+        }
+
+        .github-new:hover {
+
+            background: #D8E5DA;
         }
 
         .github-new h2 {
@@ -583,8 +779,6 @@
             font-weight: 400;
 
             line-height: 1.08;
-
-            color: #29272B;
         }
 
         .github-new h2 em {
@@ -598,8 +792,6 @@
 
             display: inline-block;
 
-            font-family: "DM Sans", sans-serif;
-
             font-size: 13px;
 
             font-weight: 700;
@@ -611,6 +803,17 @@
             border-bottom: 1px solid #29272B;
 
             padding-bottom: 5px;
+
+            transition:
+                transform 0.3s ease,
+                color 0.3s ease;
+        }
+
+        .github-new-link:hover {
+
+            transform: translateY(-3px);
+
+            color: #806A99;
         }
 
 
@@ -633,15 +836,11 @@
             align-items: center;
 
             justify-content: space-between;
-
-            gap: 30px;
         }
 
         .projects-footer p {
 
             margin: 0;
-
-            font-family: "DM Sans", sans-serif;
 
             font-size: 12px;
 
@@ -657,8 +856,6 @@
 
         .projects-footer a {
 
-            font-family: "DM Sans", sans-serif;
-
             font-size: 12px;
 
             font-weight: 600;
@@ -666,6 +863,8 @@
             color: #29272B;
 
             text-decoration: none;
+
+            transition: color 0.25s ease;
         }
 
         .projects-footer a:hover {
@@ -682,7 +881,7 @@
 
             .projects-nav-inner {
 
-                width: min(100% - 48px, 1180px);
+                width: calc(100% - 48px);
             }
 
             .projects-nav-links {
@@ -692,7 +891,7 @@
 
             .projects-intro {
 
-                width: min(100% - 48px, 1180px);
+                width: calc(100% - 48px);
 
                 grid-template-columns: 1fr;
 
@@ -701,23 +900,24 @@
                 padding: 75px 0 55px;
             }
 
+            .projects-list::before {
+                display: none;
+            }
+
             .project-row {
 
-                width: min(100% - 48px, 1180px);
+                width: calc(100% - 48px);
 
                 grid-template-columns: 95px 1fr;
 
                 gap: 35px;
 
-                padding: 38px 0;
+                padding: 42px 0;
             }
 
             .project-row-accent {
 
                 width: 100%;
-
-                padding-top: 38px;
-                padding-bottom: 38px;
 
                 padding-left: 24px;
 
@@ -726,7 +926,7 @@
 
             .research-new {
 
-                width: min(100% - 48px, 1180px);
+                width: calc(100% - 48px);
 
                 grid-template-columns: 1fr;
 
@@ -735,7 +935,7 @@
 
             .projects-footer {
 
-                width: min(100% - 48px, 1180px);
+                width: calc(100% - 48px);
             }
 
         }
@@ -763,7 +963,6 @@
             }
 
             .projects-logo {
-
                 font-size: 23px;
             }
 
@@ -771,20 +970,17 @@
 
                 width: 100%;
 
-                display: flex;
-
                 flex-wrap: wrap;
 
                 gap: 14px 20px;
             }
 
             .projects-nav-links a {
-
                 font-size: 12px;
             }
 
 
-            /* Smaller mobile intro */
+            /* Intro */
 
             .projects-intro {
 
@@ -812,7 +1008,7 @@
             }
 
 
-            /* Project rows */
+            /* Projects */
 
             .project-row {
 
@@ -835,6 +1031,21 @@
                 font-size: 44px;
             }
 
+            .project-row:hover .project-index {
+
+                transform: none;
+            }
+
+            .project-row:hover .project-main {
+
+                transform: none;
+            }
+
+            .project-row:hover .project-main h2 {
+
+                transform: none;
+            }
+
             .project-main h2 {
 
                 font-size: 30px;
@@ -845,7 +1056,6 @@
             }
 
             .project-summary {
-
                 font-size: 14px;
             }
 
@@ -870,7 +1080,7 @@
 
                 width: calc(100% - 36px);
 
-                padding: 70px 0;
+                padding: 75px 0;
             }
 
             .research-new-card {
@@ -901,6 +1111,8 @@
                 flex-direction: column;
 
                 align-items: flex-start;
+
+                gap: 20px;
 
                 padding: 35px 0;
             }
@@ -952,46 +1164,48 @@
 </nav>
 
 
+
 <!-- =====================================================
-     PROJECTS PAGE
+     INTRO
 ===================================================== -->
 
-<main class="projects-page">
+<section class="projects-intro">
 
+    <div>
 
-    <!-- =================================================
-         INTRO
-    ================================================== -->
-
-    <section class="projects-intro">
-
-        <div>
-
-            <p class="projects-kicker">
-                SELECTED WORK
-            </p>
-
-            <h1>
-                Projects,
-                <br>
-                <em>analysis &amp; curiosity.</em>
-            </h1>
-
-        </div>
-
-        <p class="projects-intro-text">
-            A selection of work exploring economics,
-            data analysis, econometrics and visualization.
+        <p class="projects-kicker">
+            SELECTED WORK
         </p>
 
-    </section>
+        <h1>
+            Projects,
+            <br>
+            <em>analysis &amp; curiosity.</em>
+        </h1>
+
+    </div>
+
+    <p class="projects-intro-text">
+        A selection of work exploring economics,
+        data analysis, econometrics and visualization.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECT LIST
+===================================================== -->
+
+<main class="projects-list">
 
 
     <!-- =================================================
          PROJECT 01
     ================================================== -->
 
-    <section class="project-row">
+    <section class="project-row project-reveal">
 
         <div class="project-index">
             01
@@ -1043,11 +1257,12 @@
     </section>
 
 
+
     <!-- =================================================
          PROJECT 02
     ================================================== -->
 
-    <section class="project-row project-row-accent">
+    <section class="project-row project-row-accent project-reveal">
 
         <div class="project-index">
             02
@@ -1099,11 +1314,12 @@
     </section>
 
 
+
     <!-- =================================================
          PROJECT 03
     ================================================== -->
 
-    <section class="project-row">
+    <section class="project-row project-reveal">
 
         <div class="project-index">
             03
@@ -1154,11 +1370,12 @@
     </section>
 
 
+
     <!-- =================================================
          PROJECT 04
     ================================================== -->
 
-    <section class="project-row project-row-accent">
+    <section class="project-row project-row-accent project-reveal">
 
         <div class="project-index">
             04
@@ -1210,11 +1427,12 @@
     </section>
 
 
+
     <!-- =================================================
          PROJECT 05
     ================================================== -->
 
-    <section class="project-row">
+    <section class="project-row project-reveal">
 
         <div class="project-index">
             05
@@ -1265,104 +1483,107 @@
     </section>
 
 
-    <!-- =================================================
-         PUBLISHED RESEARCH
-    ================================================== -->
-
-    <section class="research-new">
-
-        <div class="research-new-heading">
-
-            <p class="projects-kicker">
-                PUBLISHED RESEARCH
-            </p>
-
-            <h2>
-                From analysis
-                <br>
-                to <em>publication.</em>
-            </h2>
-
-        </div>
+</main>
 
 
-        <div class="research-new-card">
 
-            <p class="research-new-meta">
-                SPRINGER · 2026
-            </p>
+<!-- =====================================================
+     PUBLISHED RESEARCH
+===================================================== -->
 
-            <h3>
-                Rewarding Fathers, Penalizing Mothers —
-                A Quantitative Evidence on the Unequal Gains
-                of Parents in Indian Labor Market
-            </h3>
+<section class="research-new project-reveal">
 
-            <p class="research-new-authors">
-                Ayushi Sensharma · Ashish Sharma · Swati Agrawal
-            </p>
-
-            <p class="research-new-description">
-                Quantitative research examining unequal labour-market
-                outcomes associated with parenthood in India using
-                regression-based analysis.
-            </p>
-
-            <div class="research-new-links">
-
-                <a
-                    href="https://doi.org/10.1007/978-3-032-06700-5_40"
-                    target="_blank"
-                >
-                    DOI ↗
-                </a>
-
-                <a
-                    href="https://link.springer.com/chapter/10.1007/978-3-032-06700-5_40"
-                    target="_blank"
-                >
-                    Springer ↗
-                </a>
-
-            </div>
-
-            <p class="research-award-new">
-                ★ Best Paper Award · ICSBPIM 2025
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- =================================================
-         GITHUB CTA
-    ================================================== -->
-
-    <section class="github-new">
+    <div class="research-new-heading">
 
         <p class="projects-kicker">
-            MORE ON GITHUB
+            PUBLISHED RESEARCH
         </p>
 
         <h2>
-            See the work
+            From analysis
             <br>
-            <em>behind the analysis.</em>
+            to <em>publication.</em>
         </h2>
 
-        <a
-            href="https://github.com/ayushisensharma"
-            target="_blank"
-            class="github-new-link"
-        >
-            Visit my GitHub ↗
-        </a>
-
-    </section>
+    </div>
 
 
-</main>
+    <div class="research-new-card">
+
+        <p class="research-new-meta">
+            SPRINGER · 2026
+        </p>
+
+        <h3>
+            Rewarding Fathers, Penalizing Mothers —
+            A Quantitative Evidence on the Unequal Gains
+            of Parents in Indian Labor Market
+        </h3>
+
+        <p class="research-new-authors">
+            Ayushi Sensharma · Ashish Sharma · Swati Agrawal
+        </p>
+
+        <p class="research-new-description">
+            Quantitative research examining unequal labour-market
+            outcomes associated with parenthood in India using
+            regression-based analysis.
+        </p>
+
+        <div class="research-new-links">
+
+            <a
+                href="https://doi.org/10.1007/978-3-032-06700-5_40"
+                target="_blank"
+            >
+                DOI ↗
+            </a>
+
+            <a
+                href="https://link.springer.com/chapter/10.1007/978-3-032-06700-5_40"
+                target="_blank"
+            >
+                Springer ↗
+            </a>
+
+        </div>
+
+        <p class="research-award-new">
+            ★ Best Paper Award · ICSBPIM 2025
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GITHUB CTA
+===================================================== -->
+
+<section class="github-new">
+
+    <p class="projects-kicker">
+        MORE ON GITHUB
+    </p>
+
+    <h2>
+        See the work
+        <br>
+        <em>behind the analysis.</em>
+    </h2>
+
+    <a
+        href="https://github.com/ayushisensharma"
+        target="_blank"
+        class="github-new-link"
+    >
+        Visit my GitHub ↗
+    </a>
+
+</section>
+
 
 
 <!-- =====================================================
@@ -1391,6 +1612,54 @@
     </div>
 
 </footer>
+
+
+
+<!-- =====================================================
+     SCROLL REVEAL SCRIPT
+===================================================== -->
+
+<script>
+
+    const projectElements =
+        document.querySelectorAll(".project-reveal");
+
+
+    const projectObserver =
+        new IntersectionObserver(
+
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("visible");
+
+                        projectObserver.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.12
+            }
+
+        );
+
+
+    projectElements.forEach((element) => {
+
+        projectObserver.observe(element);
+
+    });
+
+</script>
 
 
 </body>
